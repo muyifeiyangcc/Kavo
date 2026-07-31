@@ -38,30 +38,42 @@ final class InAppPurchaseManager: NSObject {
     // MARK: - Product Configuration
     // Update these collections together when switching to the 10-product production environment.
     private static let configuredProductIdentifiers = [
-        "lvbsvhxcgcrvesor",
-        "dxismgcwewhrtezo",
-        "khtxlcejaxmqcsra",
-        "yadwwvxspgxwlndb",
-        "qnrcuelbtiuflyky",
-        "ymohxnvpkqxutvab"
+        "vhsbfkerngovxbla",
+        "ieakzidiqbnzxyxj",
+        "nsvqjqzxdlumryye",
+        "fcjiphudtngxvufc",
+        "svrmayjuruphgegj",
+        "atysvdhixxyupjft",
+        "toushbwzimjvedwq",
+        "putwwpqwrnanwncq",
+        "neufdvzhzhpgqznf",
+        "tbxnvjonzoslikqu",
     ]
 
     private static let configuredCoinAmounts: [String: Int] = [
-        "lvbsvhxcgcrvesor": 400,
-        "dxismgcwewhrtezo": 1_200,
-        "khtxlcejaxmqcsra": 2_450,
-        "yadwwvxspgxwlndb": 4_900,
-        "qnrcuelbtiuflyky": 6_400,
-        "ymohxnvpkqxutvab": 9_800
+        "vhsbfkerngovxbla": 400,
+        "ieakzidiqbnzxyxj": 1_200,
+        "nsvqjqzxdlumryye": 2_450,
+        "fcjiphudtngxvufc": 4_900,
+        "svrmayjuruphgegj": 6_400,
+        "atysvdhixxyupjft": 9_800,
+        "toushbwzimjvedwq": 14900,
+        "putwwpqwrnanwncq": 24500,
+        "neufdvzhzhpgqznf": 34500,
+        "tbxnvjonzoslikqu": 49000,
     ]
 
     private static let configuredUSDPrices: [String: String] = [
-        "lvbsvhxcgcrvesor": "$0.99",
-        "dxismgcwewhrtezo": "$1.99",
-        "khtxlcejaxmqcsra": "$4.99",
-        "yadwwvxspgxwlndb": "$9.99",
-        "qnrcuelbtiuflyky": "$12.99",
-        "ymohxnvpkqxutvab": "$19.99"
+        "vhsbfkerngovxbla": "$0.99",
+        "ieakzidiqbnzxyxj": "$1.99",
+        "nsvqjqzxdlumryye": "$4.99",
+        "fcjiphudtngxvufc": "$9.99",
+        "svrmayjuruphgegj": "$12.99",
+        "atysvdhixxyupjft": "$19.99",
+        "toushbwzimjvedwq": "$29.99",
+        "putwwpqwrnanwncq": "$49.99",
+        "neufdvzhzhpgqznf": "$69.99",
+        "tbxnvjonzoslikqu": "$99.99",
     ]
 
     private var productsRequest: SKProductsRequest?
