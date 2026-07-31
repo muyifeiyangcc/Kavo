@@ -4,10 +4,10 @@
 <dict>
 	<key>CFBundleDisplayName</key>
 	<string>Kavo</string>
-	<key>CFBundleIdentifier</key>
-	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleName</key>
 	<string>Kavo</string>
 	<key>CFBundlePackageType</key>
@@ -18,6 +18,14 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>Kavo needs camera access to let you capture outfit photos for posts, take chat pictures, and update your profile picture.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Kavo needs location access to help you discover nearby users and local posts.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Kavo needs microphone access so you can record videos with audio and send voice messages in chat.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Allow access to your photo library to share your outfit photos, video clips, and send images in chat.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -41,13 +49,5 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
-	<key>NSMicrophoneUsageDescription</key>
-	<string>Kavo needs microphone access so you can record videos with audio and send voice messages in chat.</string>
-	<key>NSCameraUsageDescription</key>
-	<string>Kavo needs camera access to let you capture outfit photos for posts, take chat pictures, and update your profile picture.</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Kavo needs location access to help you discover nearby users and local posts.</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Allow access to your photo library to share your outfit photos, video clips, and send images in chat.</string>
 </dict>
 </plist>
