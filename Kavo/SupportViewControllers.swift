@@ -78,7 +78,10 @@ final class SettingsViewController: KavoViewController, UITableViewDataSource, U
         case 0: navigationController?.pushViewController(RechargeViewController(), animated: true)
         case 1: navigationController?.pushViewController(RelationshipListViewController(mode: .blocked), animated: true)
         case 2, 3:
-            guard let url = URL(string: "https://www.baidu.com") else { return }
+            let urlString = indexPath.row == 2
+                ? "https://sites.google.com/view/kavo-v/privacy"
+                : "https://sites.google.com/view/kavo-v/users"
+            guard let url = URL(string: urlString) else { return }
             navigationController?.pushViewController(
                 WebPageViewController(title: rows[indexPath.row], url: url),
                 animated: true

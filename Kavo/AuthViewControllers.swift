@@ -472,7 +472,10 @@ final class EULAViewController: KavoViewController {
     }
 
     private func openLegalPage(destination: String) {
-        guard let url = URL(string: "https://www.baidu.com") else { return }
+        let urlString = destination == "privacy"
+            ? "https://sites.google.com/view/kavo-v/privacy"
+            : "https://sites.google.com/view/kavo-v/users"
+        guard let url = URL(string: urlString) else { return }
         let title = destination == "privacy" ? "Privacy Policy" : "Terms of Service"
         navigationController?.pushViewController(WebPageViewController(title: title, url: url), animated: true)
     }
@@ -611,7 +614,10 @@ final class WelcomeViewController: KavoViewController {
     }
 
     private func openLegalPage(destination: String) {
-        guard let url = URL(string: "https://www.baidu.com") else { return }
+        let urlString = destination == "privacy"
+            ? "https://sites.google.com/view/kavo-v/privacy"
+            : "https://sites.google.com/view/kavo-v/users"
+        guard let url = URL(string: urlString) else { return }
         let title = destination == "privacy" ? "Privacy Policy" : "Terms of Service"
         navigationController?.pushViewController(WebPageViewController(title: title, url: url), animated: true)
     }
