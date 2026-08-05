@@ -1,8 +1,8 @@
 workflows:
-  ios-workflow:
+  ios-native-quick-start:
     name: Kavo
-    instance_type: mac_mini_m2
     max_build_duration: 120
+    instance_type: mac_mini_m2
     integrations:
       app_store_connect: Kavo
     environment:
@@ -10,34 +10,30 @@ workflows:
         distribution_type: app_store
         bundle_identifier: com.akaislsofa.kavo
       vars:
-        APP_ID: 6798087485 # <-- Put your APP ID here
-      flutter: "3.32.4"
-      xcode: "26.5" # <-- set to specific version e.g. 14.3, 15.0 to avoid unexpected updates.
+        BUNDLE_ID: com.akaislsofa.kavo
+        XCODE_PROJECT: Kavo.xcworkspace
+        XCODE_SCHEME: Kavo
+        APP_STORE_APPLE_ID: 6798087485
+      xcode: 26.5 # <-- set to specific version e.g. 14.3, 15.0 to avoid unexpected updates.
       cocoapods: default
     scripts:
-      - name: Set up code signing settings on Xcode project
+      - name: Set up provisioning profiles settings on Xcode project
+        script: xcode-project use-profiles
+      - name: Increment build number
         script: |
-          xcode-project use-profiles
-      - name: Get Flutter packages
+          cd $CM_BUILD_DIR
+          LATEST_BUILD_NUMBER=$(app-store-connect get-latest-app-store-build-number "$APP_STORE_APPLE_ID")
+          agvtool new-version -all $(($LATEST_BUILD_NUMBER + 1))
+      - name: Build ipa for distribution
         script: |
-          flutter packages pub get
-      - name: Install pods
-        script: |
-          find . -name "Podfile" -execdir pod install \;
-      # - name: Flutter analyze
-      #   script: |
-      #     flutter analyze
-      - name: Flutter build ipa and automatic versioning
-        script: |
-          # See the following link about getting the latest App Store or TestFlight version - https://docs.codemagic.io/knowledge-codemagic/build-versioning/#app-store-or-testflight-latest-build-number
-          flutter build ipa --release --obfuscate --split-debug-info=/Users/builder/debug-info\
-            --build-name=1.0.0 \
-            --build-number=$(($(app-store-connect get-latest-testflight-build-number "$APP_ID") + 1)) \
-            --export-options-plist=/Users/builder/export_options.plist
+          xcode-project build-ipa \
+            --project "$XCODE_PROJECT" \
+            --scheme "$XCODE_SCHEME"
     artifacts:
       - build/ios/ipa/*.ipa
       - /tmp/xcodebuild_logs/*.log
-      - flutter_drive.log
+      - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.app
+      - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
     publishing:
       email:
         recipients:
