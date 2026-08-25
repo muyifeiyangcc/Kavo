@@ -5,6 +5,9 @@ target 'Kavo' do
 
   pod 'SnapKit', '5.7.1'
   pod 'IQKeyboardManagerSwift', '8.0.0'
+  pod 'Adjust', '~> 5.7', :modular_headers => true
+  pod 'FBSDKCoreKit'
+  pod 'ScreenShield', '~> 1.2.2'
 
   target 'KavoTests' do
     inherit! :search_paths

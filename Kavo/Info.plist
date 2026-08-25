@@ -14,16 +14,49 @@
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>kavo</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb1560782414970149</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>FacebookAppID</key>
+	<string>1560782414970149</string>
+	<key>FacebookAutoLogAppEventsEnabled</key>
+	<true/>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>squarecash</string>
+		<string>cashme</string>
+		<string>upi</string>
+		<string>gpay</string>
+		<string>com.amazon.mobile.shopping</string>
+		<string>mobikwik</string>
+		<string>freecharge</string>
+	</array>
+	<key>FacebookClientToken</key>
+	<string>a17523a50e94cdfa806dc547f12502a2</string>
+	<key>FacebookDisplayName</key>
+	<string>Kavo</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
-	<string>Kavo needs camera access to let you capture outfit photos for posts, take chat pictures, and update your profile picture.</string>
+	<string>Kavo needs camera access to let you make video calls, capture outfit photos for posts, take chat pictures, and update your profile picture.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Kavo needs location access to help you discover nearby users and local posts.</string>
 	<key>NSMicrophoneUsageDescription</key>
-	<string>Kavo needs microphone access so you can record videos with audio and send voice messages in chat.</string>
+	<string>Kavo needs microphone access so you can make video calls, record videos with audio, and send voice messages in chat.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Allow access to your photo library to share your outfit photos, video clips, and send images in chat.</string>
 	<key>UIApplicationSceneManifest</key>

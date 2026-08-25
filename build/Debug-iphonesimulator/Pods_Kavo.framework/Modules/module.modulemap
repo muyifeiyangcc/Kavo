@@ -1,0 +1,6 @@
+framework module Pods_Kavo {
+  umbrella header "Pods-Kavo-umbrella.h"
+
+  export *
+  module * { export * }
+}

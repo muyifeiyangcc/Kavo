@@ -1,0 +1,4 @@
+
+module ScreenShield.Swift {
+  header "ScreenShield-Swift.h"
+}

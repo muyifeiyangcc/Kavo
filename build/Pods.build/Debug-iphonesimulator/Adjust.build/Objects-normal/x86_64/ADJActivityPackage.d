@@ -1,0 +1,18 @@
+dependencies: \
+  /Users/myfy/Desktop/code/Kavo/build/Pods.build/Debug-iphonesimulator/Adjust.build/module.modulemap \
+  /Users/myfy/Desktop/code/Kavo/Pods/Adjust/Adjust/Internal/ADJActivityPackage.m \
+  /Users/myfy/Desktop/code/Kavo/Pods/Target\ Support\ Files/Adjust/Adjust-prefix.pch \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UIKit.framework/Modules/module.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Foundation.framework/Modules/module.modulemap \
+  /Users/myfy/Desktop/code/Kavo/Pods/Adjust/Adjust/Internal/ADJActivityKind.h \
+  /Users/myfy/Desktop/code/Kavo/Pods/Adjust/Adjust/Internal/ADJActivityPackage.h \
+  /Users/myfy/Desktop/code/Kavo/Pods/Adjust/Adjust/ADJEvent.h \
+  /Users/myfy/Desktop/code/Kavo/Pods/Adjust/Adjust/Internal/ADJUtil.h \
+  /Users/myfy/Desktop/code/Kavo/Pods/Adjust/Adjust/ADJConfig.h \
+  /Users/myfy/Desktop/code/Kavo/Pods/Adjust/Adjust/Internal/ADJResponseData.h \
+  /Users/myfy/Desktop/code/Kavo/Pods/Adjust/Adjust/ADJAttribution.h \
+  /Users/myfy/Desktop/code/Kavo/Pods/Adjust/Adjust/ADJEventSuccess.h \
+  /Users/myfy/Desktop/code/Kavo/Pods/Adjust/Adjust/ADJEventFailure.h \
+  /Users/myfy/Desktop/code/Kavo/Pods/Adjust/Adjust/ADJSessionSuccess.h \
+  /Users/myfy/Desktop/code/Kavo/Pods/Adjust/Adjust/ADJSessionFailure.h \
+  /Users/myfy/Desktop/code/Kavo/Pods/Adjust/Adjust/Internal/ADJBackoffStrategy.h

@@ -1,0 +1,10 @@
+framework module ScreenShield {
+  umbrella header "ScreenShield-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module ScreenShield.__Swift {
+  exclude header "ScreenShield-Swift.h"
+}

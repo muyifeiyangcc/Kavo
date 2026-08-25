@@ -1,0 +1,4 @@
+
+module ScreenShield.__Swift {
+  exclude header "ScreenShield-Swift.h"
+}

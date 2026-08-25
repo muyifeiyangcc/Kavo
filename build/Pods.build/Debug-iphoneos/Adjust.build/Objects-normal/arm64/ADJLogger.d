@@ -1,0 +1,8 @@
+dependencies: \
+  /Users/myfy/Desktop/code/Kavo/build/Pods.build/Debug-iphoneos/Adjust.build/module.modulemap \
+  /Users/myfy/Desktop/code/Kavo/Pods/Adjust/Adjust/ADJLogger.m \
+  /Users/myfy/Desktop/code/Kavo/Pods/Target\ Support\ Files/Adjust/Adjust-prefix.pch \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/UIKit.framework/Modules/module.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/Foundation.framework/Modules/module.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/usr/include/os.modulemap \
+  /Users/myfy/Desktop/code/Kavo/Pods/Adjust/Adjust/ADJLogger.h
