@@ -1,6 +1,7 @@
 import UIKit
 import SnapKit
 import AVFoundation
+import AudioToolbox
 
 private func socialAvatar(_ alternate: Bool = false) -> UIImage? {
     kavoDefaultAvatarImage()
@@ -642,6 +643,7 @@ final class ChatViewController: KavoViewController, UITableViewDataSource, UITab
     private let modeButton = UIButton(type: .system)
     private let photoButton = UIButton(type: .system)
     private let sendButton = UIButton(type: .system)
+    private let videoCallButton = UIButton(type: .custom)
     private let inputBar = UIStackView()
     private let imagePicker = KavoImagePickerCoordinator()
     private var voiceMode = false
@@ -685,7 +687,10 @@ final class ChatViewController: KavoViewController, UITableViewDataSource, UITab
         sendButton.setImage(UIImage(systemName: "paperplane.fill"), for: .normal)
         sendButton.tintColor = KavoColor.textPrimary
         sendButton.accessibilityLabel = "Send message"
+        videoCallButton.setBackgroundImage(UIImage(named: "video_call"), for: .normal)
+        videoCallButton.accessibilityLabel = "Video call"
         [modeButton, photoButton, sendButton].forEach { $0.snp.makeConstraints { $0.size.equalTo(44) } }
+        videoCallButton.addAction(UIAction { [weak self] _ in self?.startVideoCall() }, for: .touchUpInside)
         modeButton.addAction(UIAction { [weak self] _ in self?.toggleVoice() }, for: .touchUpInside)
         photoButton.addAction(UIAction { [weak self] _ in self?.pickImage() }, for: .touchUpInside)
         sendButton.addAction(UIAction { [weak self] _ in self?.sendText() }, for: .touchUpInside)
@@ -729,15 +734,22 @@ final class ChatViewController: KavoViewController, UITableViewDataSource, UITab
         inputBar.clipsToBounds = true
         view.addSubview(table)
         view.addSubview(inputBar)
+        view.addSubview(videoCallButton)
         table.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide)
             make.leading.trailing.equalToSuperview()
             make.bottom.equalTo(inputBar.snp.top).offset(-8)
         }
         inputBar.snp.makeConstraints { make in
-            make.leading.trailing.equalToSuperview().inset(10)
+            make.leading.equalToSuperview().inset(10)
+            make.trailing.equalTo(videoCallButton.snp.leading).offset(-12)
             make.bottom.equalTo(view.keyboardLayoutGuide.snp.top).offset(-8)
             make.height.equalTo(64)
+        }
+        videoCallButton.snp.makeConstraints { make in
+            make.trailing.equalToSuperview().inset(10)
+            make.centerY.equalTo(inputBar)
+            make.size.equalTo(64)
         }
         applyInitialState()
     }
@@ -921,6 +933,11 @@ final class ChatViewController: KavoViewController, UITableViewDataSource, UITab
 
     private func pickImage() {
         imagePicker.presentSourceSheet(from: self, sourceView: photoButton)
+    }
+
+    private func startVideoCall() {
+        let call = VideoCallViewController(userID: userID, repository: repository)
+        present(call, animated: true)
     }
 
     @objc private func beginRecordingTouch() {
@@ -1157,6 +1174,135 @@ final class ChatViewController: KavoViewController, UITableViewDataSource, UITab
             onBlock: { [weak self] in guard let self else { return }; repository.block(userID: userID) }
         )
         present(sheet, animated: true)
+    }
+}
+
+final class VideoCallViewController: UIViewController {
+    private let userID: UUID
+    private let repository: MockRepository
+    private let backgroundImageView = UIImageView()
+    private let gradientView = UIView()
+    private let avatarImageView = UIImageView()
+    private let nameLabel = UILabel()
+    private let subtitleLabel = UILabel()
+    private let hangUpButton = UIButton(type: .custom)
+    private var callSoundTimer: Timer?
+
+    init(userID: UUID, repository: MockRepository) {
+        self.userID = userID
+        self.repository = repository
+        super.init(nibName: nil, bundle: nil)
+        modalPresentationStyle = .fullScreen
+    }
+
+    required init?(coder: NSCoder) { nil }
+
+    override var preferredStatusBarStyle: UIStatusBarStyle { .lightContent }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .black
+
+        let user = repository.user(id: userID)
+        let userName = user?.name ?? "User"
+        let userImage = socialAvatar(userID: userID, repository: repository)
+
+        backgroundImageView.image = userImage
+        backgroundImageView.contentMode = .scaleAspectFill
+        backgroundImageView.clipsToBounds = true
+        view.addSubview(backgroundImageView)
+        backgroundImageView.snp.makeConstraints { $0.edges.equalToSuperview() }
+
+        let gradient = CAGradientLayer()
+        gradient.colors = [
+            UIColor.black.withAlphaComponent(0.03).cgColor,
+            UIColor.black.withAlphaComponent(0.10).cgColor,
+            UIColor.black.withAlphaComponent(0.96).cgColor
+        ]
+        gradient.locations = [0.22, 0.55, 0.82]
+        gradientView.layer.addSublayer(gradient)
+        view.addSubview(gradientView)
+        gradientView.snp.makeConstraints { $0.edges.equalToSuperview() }
+        gradient.frame = view.bounds
+
+        avatarImageView.image = userImage
+        avatarImageView.contentMode = .scaleAspectFill
+        avatarImageView.clipsToBounds = true
+        avatarImageView.layer.cornerRadius = 48
+        avatarImageView.layer.borderColor = UIColor.white.withAlphaComponent(0.2).cgColor
+        avatarImageView.layer.borderWidth = 1
+        view.addSubview(avatarImageView)
+        avatarImageView.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.centerY.equalTo(view.snp.centerY).offset(96)
+            make.size.equalTo(96)
+        }
+
+        nameLabel.text = userName
+        nameLabel.textColor = .white
+        nameLabel.font = .systemFont(ofSize: 30, weight: .bold)
+        nameLabel.textAlignment = .center
+        view.addSubview(nameLabel)
+        nameLabel.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(avatarImageView.snp.bottom).offset(24)
+        }
+
+        subtitleLabel.text = "You are calling \(userName) ..."
+        subtitleLabel.textColor = UIColor.white.withAlphaComponent(0.72)
+        subtitleLabel.font = .systemFont(ofSize: 17, weight: .semibold)
+        subtitleLabel.textAlignment = .center
+        view.addSubview(subtitleLabel)
+        subtitleLabel.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(nameLabel.snp.bottom).offset(14)
+        }
+
+        hangUpButton.setBackgroundImage(UIImage(named: "phone"), for: .normal)
+        hangUpButton.accessibilityLabel = "End video call"
+        hangUpButton.addAction(UIAction { [weak self] _ in self?.dismiss(animated: true) }, for: .touchUpInside)
+        view.addSubview(hangUpButton)
+        hangUpButton.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.bottom.equalTo(view.safeAreaLayoutGuide).offset(-56)
+            make.size.equalTo(72)
+        }
+    }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        gradientView.layer.sublayers?.compactMap { $0 as? CAGradientLayer }.first?.frame = gradientView.bounds
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
+        let session = AVAudioSession.sharedInstance()
+        try? session.setCategory(.playback, mode: .default)
+        try? session.setActive(true)
+        startCallSoundLoop()
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        stopCallSoundLoop()
+        try? AVAudioSession.sharedInstance().setActive(false, options: .notifyOthersOnDeactivation)
+    }
+
+    private func startCallSoundLoop() {
+        stopCallSoundLoop()
+        AudioServicesPlaySystemSound(1005)
+        callSoundTimer = Timer.scheduledTimer(withTimeInterval: 2.0, repeats: true) { _ in
+            AudioServicesPlaySystemSound(1005)
+        }
+        if let callSoundTimer {
+            RunLoop.main.add(callSoundTimer, forMode: .common)
+        }
+    }
+
+    private func stopCallSoundLoop() {
+        callSoundTimer?.invalidate()
+        callSoundTimer = nil
     }
 }
 
