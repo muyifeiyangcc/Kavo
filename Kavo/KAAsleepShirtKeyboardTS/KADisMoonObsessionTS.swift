@@ -10,12 +10,12 @@ enum KASayFunInfoTS: LocalizedError {
 
     var errorDescription: String? {
         switch self {
-        case .KAintBusOilTS: return "尚未配置测试接口地址"
-        case .KADimensionKindNotebookTS: return "服务端响应格式无效"
+        case .KAintBusOilTS: return "Test API address is not configured"
+        case .KADimensionKindNotebookTS: return "Invalid server response format"
         case .KAKnightTeacherAnyTS(let KAHorseAlterSupportTS, let KABarrenAthleteBrushTS): return "HTTP \(KAHorseAlterSupportTS)：\(KABarrenAthleteBrushTS)"
-        case .KASeeDownSnowingTS(let KAHorseAlterSupportTS, let KAPickWindPrincessTS): return "业务失败 \(KAHorseAlterSupportTS)：\(KAPickWindPrincessTS ?? "")"
-        case .KAXinCharacterHaveTS: return "响应缺少 result/data"
-        case .KATableTableMelonTS: return "暂时无法获取 Adjust ID，请稍后重试"
+        case .KASeeDownSnowingTS(let KAHorseAlterSupportTS, let KAPickWindPrincessTS): return "Business failure \(KAHorseAlterSupportTS): \(KAPickWindPrincessTS ?? "")"
+        case .KAXinCharacterHaveTS: return "Response is missing result/data"
+        case .KATableTableMelonTS: return "Adjust ID is temporarily unavailable; please try again later"
         }
     }
 }
@@ -37,14 +37,14 @@ final class KADisMoonObsessionTS {
                                              KADragonCeillingCallTS: KADolphinBootYunTS.KAMeShadowBridgeTS)
     }
 
-    /// 3.2.2：该接口的非 0000 不是网络异常，而是明确进入 A 包的路由结果。
+    /// 3.2.2: a non-0000 response is an explicit A-package route, not a network error.
     func KAAsleepLaterWaterTS() async throws -> KAQueenZooBirdTS {
         let KAOptionDiscussionDogTS = KADolphinBootYunTS.KAOptionDiscussionDogTS
         let KABarrenAthleteBrushTS: [String: Any] = [
             KAOptionDiscussionDogTS.KALabelVillainMirrorTS: 1,
             KAOptionDiscussionDogTS.KABiteEnoughTimeTS: KADolphinBootYunTS.KAHeroMouseSpellTS
         ]
-        KADespitePotionBigTS.KAInterCentralDisplayTS.KABoomGoldMountainTS("启动参数", "仅发送 \(KAOptionDiscussionDogTS.KALabelVillainMirrorTS)=1、\(KAOptionDiscussionDogTS.KABiteEnoughTimeTS)=\(KADolphinBootYunTS.KAHeroMouseSpellTS)")
+
         let KAOilArgMayTS = try await KAPantsAwfullyMaxTS(
             KAAmongBeenComputerTS: KADolphinBootYunTS.KAPictureOctopusWantTS,
             KABarrenAthleteBrushTS: KABarrenAthleteBrushTS
@@ -70,9 +70,7 @@ final class KADisMoonObsessionTS {
             KAOptionDiscussionDogTS.KABoatVocabularyCableTS: KAComesWaterMirrorTS.KARandomBootBrushTS(KAStudentCoatTableTS: KADolphinBootYunTS.KAStudentCoatTableTS)
         ]
         if !KAPresentSharkSlowTS.isEmpty { KABarrenAthleteBrushTS[KAOptionDiscussionDogTS.KAInfoElephantCopperTS] = KAPresentSharkSlowTS }
-        KADespitePotionBigTS.KAInterCentralDisplayTS.KABoomGoldMountainTS("登录参数", KAPresentSharkSlowTS.isEmpty
-            ? "首次登录：不发送 password；只发送 AdjustAdid(a)、deviceNo(n)"
-            : "再次登录：发送 Keychain 保存的 password(d)、AdjustAdid(a)、deviceNo(n)")
+
         return try await KASlowCollapseGrapeTS(
             KAAmongBeenComputerTS: KADolphinBootYunTS.KAMsgWoodListTS,
             KABarrenAthleteBrushTS: KABarrenAthleteBrushTS,
@@ -172,7 +170,7 @@ final class KADisMoonObsessionTS {
         let KAPickWindPrincessTS = (KAInterCivilianBusTS["message"] as? String) ?? ""
         let KADemonstrateFromTreeTS = KAInterCivilianBusTS["result"] ?? KAInterCivilianBusTS["data"] ?? NSNull()
         KABloomUseBikeTS(
-            KALovingOppPassTS: "响应Envelope",
+            KALovingOppPassTS: "Response envelope",
             KAPickWindPrincessTS: "code=\(KAHorseAlterSupportTS)，message=\(KAPickWindPrincessTS)，result/data=\(String(describing: KADemonstrateFromTreeTS))"
         )
         return KAClientTheintTS(KAHorseAlterSupportTS: KAHorseAlterSupportTS,
@@ -187,16 +185,16 @@ final class KADisMoonObsessionTS {
             let KASupportEasyShirtTS = try KACryHaveLightTS.KAFishMelonKingTS(KADirectorScabSwapTS)
             KABloomUseBikeTS(
                 KALovingOppPassTS: "AES",
-                KAPickWindPrincessTS: "解密响应：\(KASupportEasyShirtTS)"
+                KAPickWindPrincessTS: "Decrypted response: \(KASupportEasyShirtTS)"
             )
             KADesertCountPaintTS = Data(KASupportEasyShirtTS.utf8)
         } else if JSONSerialization.isValidJSONObject(KADemonstrateFromTreeTS) {
             KADesertCountPaintTS = try JSONSerialization.data(withJSONObject: KADemonstrateFromTreeTS, options: [.sortedKeys])
             KABloomUseBikeTS(
-                KALovingOppPassTS: "响应明文",
-                KAPickWindPrincessTS: "服务端直接返回：\(String(decoding: KADesertCountPaintTS, as: UTF8.self))"
+            KALovingOppPassTS: "Response plaintext",
+            KAPickWindPrincessTS: "Server returned directly: \(String(decoding: KADesertCountPaintTS, as: UTF8.self))"
             )
-            KADespitePotionBigTS.KAInterCentralDisplayTS.KABoomGoldMountainTS("响应", "服务端直接返回 JSON 对象（兼容文档示例）")
+
         } else {
             throw KASayFunInfoTS.KADimensionKindNotebookTS
         }
@@ -210,15 +208,9 @@ final class KADisMoonObsessionTS {
                                     KADiscussionPickHoorayTS: String,
                                     KAAntiForestBloomTS: [String]) {
         if KASauceDevCanTS {
-            KADespitePotionBigTS.KAInterCentralDisplayTS.KABoomGoldMountainTS(
-                "请求",
-                "POST \(KAZeroLiefChanceTS.absoluteString)\n路径规则：\(KAAmongBeenComputerTS)\nHeaders：\(KAFunTwoRainTS)\n加密前参数：\(KASupportEasyShirtTS)\n加密后 Hex：\(KADiscussionPickHoorayTS)"
-            )
+
         } else {
-            KADespitePotionBigTS.KAInterCentralDisplayTS.KABoomGoldMountainTS(
-                "请求",
-                "POST \(KAZeroLiefChanceTS.absoluteString)，路径规则：\(KAAmongBeenComputerTS)，业务字段：\(KAAntiForestBloomTS.joined(separator: ","))"
-            )
+
         }
     }
 
@@ -226,22 +218,16 @@ final class KADisMoonObsessionTS {
                                          KAFishChancePrivacyTS: Int,
                                          KAAppleCloudCoatTS: String) {
         if KASauceDevCanTS {
-            KADespitePotionBigTS.KAInterCentralDisplayTS.KABoomGoldMountainTS(
-                "HTTP",
-                "耗时 \(KAStudentYunCloudTS)ms，状态 \(KAFishChancePrivacyTS)，原始响应：\(KAAppleCloudCoatTS)"
-            )
+
         } else {
-            KADespitePotionBigTS.KAInterCentralDisplayTS.KABoomGoldMountainTS(
-                "HTTP",
-                "耗时 \(KAStudentYunCloudTS)ms，状态 \(KAFishChancePrivacyTS)"
-            )
+
         }
     }
 
     private func KABloomUseBikeTS(KALovingOppPassTS: String,
                                          KAPickWindPrincessTS: String) {
         guard KASauceDevCanTS else { return }
-        KADespitePotionBigTS.KAInterCentralDisplayTS.KABoomGoldMountainTS(KALovingOppPassTS, KAPickWindPrincessTS)
+
     }
 
     private var KASauceDevCanTS: Bool {

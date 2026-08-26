@@ -1,7 +1,7 @@
 import UIKit
 
 enum KAGardenMaxInterTS {
-    /// 秒级 Unix 时间戳。只有设备当前绝对时间大于该值时，才请求启动接口。
+    /// Unix timestamp in seconds. The startup API is requested only after the device time exceeds this value.
     static let KADeeplyBiteChangeTS: TimeInterval = 1787126167
 
     static var KATeacherBootDreamsTS: Bool {

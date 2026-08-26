@@ -1,6 +1,6 @@
 import Foundation
 
-/// A 包已有 Adjust/Facebook SDK 时实现此协议并注入，避免重复初始化 SDK。
+/// Inject this when the A package already owns Adjust/Facebook SDK initialization to avoid duplicate setup.
 protocol KAEraserOctopusDeeplyTS: AnyObject {
     var KATracksMayAntiTS: String { get }
     var KAGrazeNotebookOneTS: String { get }
@@ -11,7 +11,7 @@ protocol KAEraserOctopusDeeplyTS: AnyObject {
     func KAWindWinCoffeeTS(KABeeEarthSayTS: Decimal, KAListAnySauceTS: String)
 }
 
-/// Demo 与正式 KAAsleepShirtKeyboardTS 启动路径共用，用于把 Adjust 归因回调绑定到当前 ...j 上报器。
+/// Shared by Demo and production startup paths to bind Adjust attribution callbacks to the current ...j reporter.
 protocol KAKingSauceChairTS: AnyObject {
     func KAPaperDialogueBridgeTS(_ KAShoesDownLightTS: KAUpLovingDogTS)
 }
@@ -23,17 +23,17 @@ final class KAImageAmongHelloTS: KAEraserOctopusDeeplyTS {
     func KARandomMusicChangeTS(_ KAUntilCenterCountTS: KAXrcSoleToolTS,
                                   KABeeEarthSayTS: Decimal?,
                                   KAListAnySauceTS: String?) {
-        KADespitePotionBigTS.KAInterCentralDisplayTS.KABoomGoldMountainTS("Analytics", "未注入 Adjust SDK Adapter；已保留后端 ...j 上报，事件=\(KAUntilCenterCountTS.rawValue)")
+
     }
     func KAWindWinCoffeeTS(KABeeEarthSayTS: Decimal, KAListAnySauceTS: String) {
-        KADespitePotionBigTS.KAInterCentralDisplayTS.KABoomGoldMountainTS("Facebook", "未注入 Facebook SDK Adapter；Purchase 本地埋点未执行")
+
     }
 }
 
 final class KAUpLovingDogTS {
     private let KABoomArrivalDreamsTS: KADisMoonObsessionTS
     private weak var KAJumpPencilBessTS: KAEraserOctopusDeeplyTS?
-    // 使用新版本 Key，避免旧 Demo 曾在普通启动流程写入的标记阻止归因回调。
+    // Use a new key so a marker from the old Demo startup cannot block attribution callbacks.
     private let KABombEnhanceYearTS = "KAWhaleFlatBottleTS.adjust.installAttributionReported.v2"
 
     init(KABoomArrivalDreamsTS: KADisMoonObsessionTS, KAJumpPencilBessTS: KAEraserOctopusDeeplyTS) {
@@ -41,7 +41,7 @@ final class KAUpLovingDogTS {
         self.KAJumpPencilBessTS = KAJumpPencilBessTS
     }
 
-    /// 只能由 AppDelegate 的 adjustAttributionChanged 回调触发，不能由普通启动流程触发。
+    /// Trigger only from AppDelegate.adjustAttributionChanged, never from normal startup.
     func KACenterListOptionTS(KAGuitarDeficitSelectTS: String?, KAYearKnightDeviceTS: String) {
         guard !UserDefaults.standard.bool(forKey: KABombEnhanceYearTS) else { return }
         UserDefaults.standard.set(true, forKey: KABombEnhanceYearTS)
@@ -71,9 +71,9 @@ final class KAUpLovingDogTS {
                                     KAGuitarDeficitSelectTS: String,
                                     KAYearKnightDeviceTS: String) {
         let KAComeImageBeenTS = KAUntilCenterCountTS == .KACarDrpWaterTS
-            ? "只调用后端 ...j，不发送 Adjust SDK"
-            : "发送 Adjust SDK，并异步调用后端 ...j"
-        KADespitePotionBigTS.KAInterCentralDisplayTS.KABoomGoldMountainTS("Adjust", "事件 \(KAUntilCenterCountTS.rawValue)：\(KAComeImageBeenTS)")
+            ? "Backend ...j only; no Adjust SDK event"
+            : "Adjust SDK event plus asynchronous backend ...j"
+
         Task { [weak KAJumpPencilBessTS] in
             let KANodeUpSwordTS: String
             if KAYearKnightDeviceTS.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
@@ -82,10 +82,7 @@ final class KAUpLovingDogTS {
                 KANodeUpSwordTS = KAYearKnightDeviceTS
             }
             guard !KANodeUpSwordTS.isEmpty else {
-                KADespitePotionBigTS.KAInterCentralDisplayTS.KABoomGoldMountainTS(
-                    "Adjust上报失败",
-                    "事件=\(KAUntilCenterCountTS.rawValue)，无法取得 Adjust ADID，未发送后端 ...j"
-                )
+
                 return
             }
             do {
@@ -93,7 +90,7 @@ final class KAUpLovingDogTS {
                                                            KAUntilCenterCountTS: KAUntilCenterCountTS,
                                                            KAYearKnightDeviceTS: KANodeUpSwordTS)
             } catch {
-                KADespitePotionBigTS.KAInterCentralDisplayTS.KABoomGoldMountainTS("Adjust上报失败", "事件=\(KAUntilCenterCountTS.rawValue)，\(error.localizedDescription)；不阻塞主流程")
+
             }
         }
     }

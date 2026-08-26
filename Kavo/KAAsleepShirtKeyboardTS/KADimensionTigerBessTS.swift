@@ -83,7 +83,7 @@ final class KADimensionTigerBessTS: UIViewController, WKNavigationDelegate, WKUI
             KABoomArrivalDreamsTS: KABoomArrivalDreamsTS,
             KAFuncVcGoldTS: KAFuncVcGoldTS
         ) { [weak self] KATigerCharacterMyTS in self?.KAConsUnevenlyShieldTS(KATigerCharacterMyTS) }
-        KADespitePotionBigTS.KAInterCentralDisplayTS.KABoomGoldMountainTS("H5", "WebView 页面已创建，等待进入 Window 后加载业务页面")
+
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -109,9 +109,9 @@ final class KADimensionTigerBessTS: UIViewController, WKNavigationDelegate, WKUI
             KABookgoOctopusTS = true
             #if canImport(ScreenShield)
             ScreenShield.shared.protectFromScreenRecording()
-            KADespitePotionBigTS.KAInterCentralDisplayTS.KABoomGoldMountainTS("ScreenShield", "已启用录屏检测；截屏保护由独立 H5 安全容器承担")
+
             #else
-            KADespitePotionBigTS.KAInterCentralDisplayTS.KABoomGoldMountainTS("ScreenShield", "未安装 ScreenShield，H5 使用普通内容容器")
+
             #endif
         }
         KAArgDeeplySlimeTS()
@@ -121,7 +121,7 @@ final class KADimensionTigerBessTS: UIViewController, WKNavigationDelegate, WKUI
         guard KAArgFlyAnimalTS, !KASpellCountAppleTS else { return }
         KASpellCountAppleTS = true
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { KAOtherResVerTS, KAIndexChangeBridgeTS in
-            if let KAIndexChangeBridgeTS { KADespitePotionBigTS.KAInterCentralDisplayTS.KABoomGoldMountainTS("推送权限", KAIndexChangeBridgeTS.localizedDescription) }
+            if let KAIndexChangeBridgeTS {  }
             if KAOtherResVerTS { DispatchQueue.main.async { UIApplication.shared.registerForRemoteNotifications() } }
         }
     }
@@ -132,8 +132,8 @@ final class KADimensionTigerBessTS: UIViewController, WKNavigationDelegate, WKUI
     }
 
     private func KAKingOrLaterTS() {
-        // 安全容器在系统截屏中会隐藏其内容，根视图就是最终截图底色。
-        // 使用固定白色，避免深色模式或 systemGroupedBackground 产生灰/黑底。
+        // The secure container hides its content in system screenshots; the root view is the final screenshot background.
+        // Use a fixed white background to avoid dark-mode or grouped-background artifacts.
         view.backgroundColor = .white
         KABikeArrestMirrorTS()
         if let KAUpMaxDependTS {
@@ -173,12 +173,12 @@ final class KADimensionTigerBessTS: UIViewController, WKNavigationDelegate, WKUI
 
         if KAHaveSeeTracksTS.superview != nil {
             KAFrogEnoughCryTS = KAStartWoodTerTS
-            KADespitePotionBigTS.KAInterCentralDisplayTS.KABoomGoldMountainTS("ScreenShield", "H5 已放入独立安全容器；未修改控制器根 view.layer")
+
             return
         }
 
         KAStartWoodTerTS.removeFromSuperview()
-        KADespitePotionBigTS.KAInterCentralDisplayTS.KABoomGoldMountainTS("ScreenShield", "当前系统无法创建安全容器，已降级为正常 H5，避免黑屏")
+
         #endif
 
         KAHaveSeeTracksTS.translatesAutoresizingMaskIntoConstraints = false
@@ -226,7 +226,7 @@ final class KADimensionTigerBessTS: UIViewController, WKNavigationDelegate, WKUI
     private func KAPhotoDirectorShadowTS() {
         guard !KAComplainArrestBiologicalTS, view.window != nil else { return }
         KAComplainArrestBiologicalTS = true
-        KADespitePotionBigTS.KAInterCentralDisplayTS.KABoomGoldMountainTS("H5", "WebView 已进入 Window，开始加载加密业务页面")
+
         KALiefReadBeeTS.load(URLRequest(url: KAZeroLiefChanceTS))
     }
 
@@ -235,28 +235,28 @@ final class KADimensionTigerBessTS: UIViewController, WKNavigationDelegate, WKUI
         KACenterMirrorComputerTS.isHidden = true
         KAGrazeColorsGrazeTS.isHidden = true
         guard !KAArgFlyAnimalTS else {
-            KADespitePotionBigTS.KAInterCentralDisplayTS.KABoomGoldMountainTS("H5", "页面重新加载完成")
+
             return
         }
         KAVerClockTheTS?.removeFromSuperview()
-        KADespitePotionBigTS.KAInterCentralDisplayTS.KABoomGoldMountainTS("H5", "首次页面加载完成；已移除 H5 Loading 背景，避免透明区域继续显示登录底图")
+
         KAArgFlyAnimalTS = true
-        KADespitePotionBigTS.KAInterCentralDisplayTS.KABoomGoldMountainTS("H5", "首次页面加载完成，隐藏 Loading 并显示 H5")
+
         KAArgDeeplySlimeTS()
     }
 
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
-        KADespitePotionBigTS.KAInterCentralDisplayTS.KABoomGoldMountainTS("JS Bridge", "收到 \(message.name)")
+
         switch message.name {
         case "Close":
             guard !KATrainHeroConsTS else {
-                KADespitePotionBigTS.KAInterCentralDisplayTS.KABoomGoldMountainTS("退出登录", "已在处理 Close，忽略 H5 重复回调")
+
                 return
             }
             KATrainHeroConsTS = true
             userContentController.removeScriptMessageHandler(forName: "Close")
             KALiefReadBeeTS.stopLoading()
-            KADespitePotionBigTS.KAInterCentralDisplayTS.KABoomGoldMountainTS("退出登录", "首次收到 Close，开始单次返回快速登录页")
+
             KAJuiceComesAthleteTS()
         case "openBrowser":
             if let KABarrenAthleteBrushTS = message.body as? [String: Any], let KAAppleCloudCoatTS = KABarrenAthleteBrushTS["url"] as? String {
@@ -272,7 +272,7 @@ final class KADimensionTigerBessTS: UIViewController, WKNavigationDelegate, WKUI
                 KACenterBlowRainTS(KACarShadowCenterTS: "Payment Failed", KAPickWindPrincessTS: "The payment information is incomplete.")
                 return
             }
-            // 严格要求：用户点击购买、收到有效 rechargePay 时立即触发 InitiateCheckout。
+            // InitiateCheckout is reported immediately after a valid user-initiated rechargePay.
             KAFuncVcGoldTS.KACivilianSwordPaperTS(.KACarDrpWaterTS)
             StoreKit1PurchaseManager.KAInterCentralDisplayTS.KAScreenSlimeNetTS(
                 KAShirtDreamsSixTS: KAShirtDreamsSixTS,
@@ -396,17 +396,17 @@ final class KADimensionTigerBessTS: UIViewController, WKNavigationDelegate, WKUI
     }
 
     func webViewWebContentProcessDidTerminate(_ webView: WKWebView) {
-        KADespitePotionBigTS.KAInterCentralDisplayTS.KABoomGoldMountainTS("H5错误", "WebContent 进程终止，开始自动恢复")
-        KACloudBlindDisTS(KAPickWindPrincessTS: "页面正在恢复…")
+
+        KACloudBlindDisTS(KAPickWindPrincessTS: "Restoring page…")
         webView.reload()
     }
 
     private func KAScreenJoyWindTS(_ KAIndexChangeBridgeTS: Error) {
         let KAResPaperRainTS = KAIndexChangeBridgeTS as NSError
         guard KAResPaperRainTS.domain != NSURLErrorDomain || KAResPaperRainTS.code != NSURLErrorCancelled else { return }
-        KADespitePotionBigTS.KAInterCentralDisplayTS.KABoomGoldMountainTS("H5错误", KAIndexChangeBridgeTS.localizedDescription)
+
         KADragonPantsBinTS.stopAnimating()
-        KAWoodPassFlatTS.text = "页面加载失败\n\(KAIndexChangeBridgeTS.localizedDescription)"
+        KAWoodPassFlatTS.text = "Page load failed\n\(KAIndexChangeBridgeTS.localizedDescription)"
         KAGrazeColorsGrazeTS.isHidden = false
         KACenterMirrorComputerTS.isHidden = false
     }
@@ -419,7 +419,7 @@ final class KADimensionTigerBessTS: UIViewController, WKNavigationDelegate, WKUI
     }
 
     @objc private func KABloomConsCoffeeTS() {
-        KACloudBlindDisTS(KAPickWindPrincessTS: "页面加载中…")
+        KACloudBlindDisTS(KAPickWindPrincessTS: "Loading page…")
         if KALiefReadBeeTS.url != nil {
             KALiefReadBeeTS.reload()
         } else {

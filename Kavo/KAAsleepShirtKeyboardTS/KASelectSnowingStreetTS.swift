@@ -43,7 +43,7 @@ final class KASelectSnowingStreetTS {
         KAPlaneBlindFishTS[kSecValueData as String] = Data(KAIndexAthleticInfoTS.utf8)
         KAPlaneBlindFishTS[kSecAttrAccessible as String] = kSecAttrAccessibleAfterFirstUnlock
         let KAMagicDiscussionTheTS = SecItemAdd(KAPlaneBlindFishTS as CFDictionary, nil)
-        if KAMagicDiscussionTheTS != errSecSuccess { KADespitePotionBigTS.KAInterCentralDisplayTS.KABoomGoldMountainTS("Keychain", "写入失败 status=\(KAMagicDiscussionTheTS)") }
+        if KAMagicDiscussionTheTS != errSecSuccess {  }
     }
 
     private func KAPrivacyDescDrpTS(_ KAVineDataDialectTS: KAAthleticScabFlyTS) -> String? {

@@ -30,14 +30,14 @@ public class KAPigDolphinAversionTS: NSObject {
         bufferPtrSize = 1024 * (UInt(bufferSize) >> 10) + 1024
         bufferPtr = malloc(Int(bufferPtrSize) *  MemoryLayout<UInt8>.size)
         memset(bufferPtr, 0, Int(bufferPtrSize))
-        
+
         let vkey = (key.data(using: .utf8)! as NSData).bytes
         var ivKey : UnsafeRawPointer?
         if let iv = iv {
             ivKey = (iv.data(using: .utf8)! as NSData).bytes
         }
         let vplainText = (data as NSData).bytes
-        
+
         ccStatus = CCCrypt(0, 0, iv == nil ? 3 : 1, vkey, kCCKeySizeAES128, ivKey, vplainText, bufferSize, bufferPtr, Int(bufferPtrSize), &movedBytes)
         var ciphertext = ""
         if ccStatus == kCCSuccess {
@@ -61,8 +61,8 @@ public class KAPigDolphinAversionTS: NSObject {
         key: String,
         iv: String? = nil
     ) -> String? {
-        
-        
+
+
         guard
             let base64Data = text.data(using: .utf8),
             let encryptData =  Data(base64Encoded: base64Data, options: .ignoreUnknownCharacters)
@@ -76,7 +76,7 @@ public class KAPigDolphinAversionTS: NSObject {
         bufferPtrSize = 1024 * (UInt(plainTextBufferSize) >> 10) + 1024
         bufferPtr = malloc(Int(bufferPtrSize) *  MemoryLayout<UInt8>.size)
         memset(bufferPtr, 0, Int(bufferPtrSize))
-        
+
         let vkey = (key.data(using: .utf8)! as NSData).bytes
         var ivKey : UnsafeRawPointer?
         if let iv = iv {

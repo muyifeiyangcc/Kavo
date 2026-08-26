@@ -3,7 +3,7 @@ import Foundation
 enum KAFlyShoesSeeTS {
     static let KAAskEarthTootsyTS = "Kavo"
     static let KACoatYourSweetTS = "vryv34u81q0w"
-    static let KAProtectBlindRiverTS = "sandbox"
+    static let KAProtectBlindRiverTS = "production"
 
     static let KAMonkeySwordGrapeTS = "Install"
     static let KANorDisVocabularyTS = "yga78n"

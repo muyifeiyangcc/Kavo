@@ -35,7 +35,7 @@ final class KAAsleepShirtKeyboardTS {
                        KAEasyTwoThereTS: KAEraserOctopusDeeplyTS,
                        KAScouringOurJoyTS: @escaping () -> Void) {
         guard !KAArgSiteThreeTS else {
-            KADespitePotionBigTS.KAInterCentralDisplayTS.KABoomGoldMountainTS("流程", "KAAsleepShirtKeyboardTS 已启动，忽略重复调用")
+
             return
         }
         KAArgSiteThreeTS = true
@@ -60,21 +60,21 @@ final class KAAsleepShirtKeyboardTS {
             }
             KAAngerintBoatTS()
         } catch {
-            KADespitePotionBigTS.KAInterCentralDisplayTS.KABoomGoldMountainTS("启动失败", "KAAsleepShirtKeyboardTS 配置无效：\(error.localizedDescription)")
+
         }
     }
 
     func KABigDevVillainTS(KATeacherSiteDescTS: Data) {
         KASelectSnowingStreetTS.KAInterCentralDisplayTS.KAQueEveryGuitarTS = KATeacherSiteDescTS.map { String(format: "%02.2hhx", $0) }.joined()
-        KADespitePotionBigTS.KAInterCentralDisplayTS.KABoomGoldMountainTS("推送", "APNs token 已获取并保存")
+
     }
 
-    /// 必须从 AdjustDelegate.adjustAttributionChanged 回调中调用。
-    /// 回调早于 KAAsleepShirtKeyboardTS 初始化时会暂存，初始化完成后再执行 Install 与 ...j。
+    /// Must be called from AdjustDelegate.adjustAttributionChanged.
+    /// If the callback arrives before initialization, it is queued until Install and ...j can run.
     func KAFlatInfoCivilianTS(KAGuitarDeficitSelectTS: String?, KAYearKnightDeviceTS: String) {
         guard let KAIronMomentObsessionTS else {
             KAAcheCountTestTS = (KAGuitarDeficitSelectTS, KAYearKnightDeviceTS)
-            KADespitePotionBigTS.KAInterCentralDisplayTS.KABoomGoldMountainTS("Adjust", "归因回调早于 KAAsleepShirtKeyboardTS 初始化，已暂存 Install")
+
             return
         }
         KAIronMomentObsessionTS.KAFuncVcGoldTS.KACenterListOptionTS(
@@ -85,7 +85,7 @@ final class KAAsleepShirtKeyboardTS {
 
     @discardableResult
     func KABusyHatDesireTS(_ KAZeroLiefChanceTS: URL) -> Bool {
-        KADespitePotionBigTS.KAInterCentralDisplayTS.KABoomGoldMountainTS("外部唤起", "已处理 Scheme：\(KAZeroLiefChanceTS.scheme ?? "")")
+
         NotificationCenter.default.post(name: Self.KALineUseConsTS, object: nil,
                                         userInfo: ["KAZeroLiefChanceTS": KAZeroLiefChanceTS.absoluteString])
         return true
@@ -96,7 +96,7 @@ final class KAAsleepShirtKeyboardTS {
         KAEysComputerWindowTS()
         switch KAMoleComesMusicTS {
         case .KADemonstrateBiologicalOurTS:
-            KADespitePotionBigTS.KAInterCentralDisplayTS.KABoomGoldMountainTS("完成", "进入 A 包")
+
             let KADirectorBudgetLaptopTS = KAScouringOurJoyTS
             KAScouringOurJoyTS = nil
             KADirectorBudgetLaptopTS?()
@@ -117,18 +117,18 @@ final class KAAsleepShirtKeyboardTS {
         }
         KATrainWindowMetalTS = KACivilianDelDemandTS
         KACivilianDelDemandTS.start(queue: KAMorningStudentMirrorTS)
-        KADespitePotionBigTS.KAInterCentralDisplayTS.KABoomGoldMountainTS("网络门禁", "开始监听网络；有网后才请求启动接口")
+
     }
 
     private func KAOnlineOnIdahoTS(_ KAFileSelectSalarTS: Bool) {
         KAAllyLovingWindowTS = KAFileSelectSalarTS
         if KAFileSelectSalarTS {
-            KADespitePotionBigTS.KAInterCentralDisplayTS.KABoomGoldMountainTS("网络门禁", "网络可用，准备请求启动接口")
+
             KAAnyGrapeNorTS()
         } else {
             KAChairBottleSnowingTS?.cancel()
             KAChairBottleSnowingTS = nil
-            KADespitePotionBigTS.KAInterCentralDisplayTS.KABoomGoldMountainTS("网络门禁", "网络不可用，保持启动等待页，不处理 A/B 路由")
+
         }
     }
 
@@ -144,10 +144,7 @@ final class KAAsleepShirtKeyboardTS {
                 self.KADefinitionRiverCarTS(KAMoleComesMusicTS)
             } catch {
                 self.KAGuitarDataSourTS = false
-                KADespitePotionBigTS.KAInterCentralDisplayTS.KABoomGoldMountainTS(
-                    "启动失败",
-                    "\(error.localizedDescription)；不误判为 A 包，网络可用时稍后重试"
-                )
+
                 self.KARoadMuchComesTS()
             }
         }
@@ -174,7 +171,7 @@ final class KAAsleepShirtKeyboardTS {
     private func KAMelonDownAllyTS(KAFunBloomInTS: KAToolShieldMsgTS) {
         guard let KAIronMomentObsessionTS, let KAFreeCablePhoneTS else { return }
         guard !(KAFreeCablePhoneTS.topViewController is KADevComesPhotoTS) else {
-            KADespitePotionBigTS.KAInterCentralDisplayTS.KABoomGoldMountainTS("路由", "快速登录页已显示，忽略重复跳转")
+
             return
         }
         let KAOnShieldPictureTS = KADevComesPhotoTS(KAIronMomentObsessionTS: KAIronMomentObsessionTS,

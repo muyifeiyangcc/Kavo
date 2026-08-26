@@ -46,7 +46,7 @@ final class KADevComesPhotoTS: UIViewController {
         super.viewDidAppear(animated)
         guard !KATestShirtBlightTS, let KAEnhanceHouseCanTS else { return }
         KATestShirtBlightTS = true
-        KADespitePotionBigTS.KAInterCentralDisplayTS.KABoomGoldMountainTS("登录页", "非首次登录：已显示登录页，在页面上自动展示 Loading 并预加载 H5")
+
         KABlowCarColonialTS(KAZeroLiefChanceTS: KAEnhanceHouseCanTS)
     }
 
@@ -111,7 +111,7 @@ final class KADevComesPhotoTS: UIViewController {
     @objc private func KAPerfectRiverMemoryTS() {
         guard !KAWindowCameraCentralTS else { return }
         KAPeachCentralDialogueTS(true)
-        KADespitePotionBigTS.KAInterCentralDisplayTS.KABoomGoldMountainTS("登录页", "首次登录：点击 Sign In 后在登录页展示 Loading，并开始登录及预加载 H5")
+
         Task { @MainActor [weak self] in
             guard let self else { return }
             do {
@@ -136,7 +136,7 @@ final class KADevComesPhotoTS: UIViewController {
         )
         KAPantsClockNorTS.modalPresentationStyle = .fullScreen
         KAPhotoOrangeHatTS = KAPantsClockNorTS
-        KADespitePotionBigTS.KAInterCentralDisplayTS.KABoomGoldMountainTS("H5", "先无动画 present WebView，进入 Window 后再开始加载 H5")
+
         present(KAPantsClockNorTS, animated: false) { [weak self, weak KAPantsClockNorTS] in
             guard let self, let KAPantsClockNorTS,
                   KAPhotoOrangeHatTS === KAPantsClockNorTS else { return }
@@ -154,14 +154,14 @@ final class KADevComesPhotoTS: UIViewController {
     }
 
     private func KASixDisplayListTS(_ KAIndexChangeBridgeTS: Error) {
-        KADespitePotionBigTS.KAInterCentralDisplayTS.KABoomGoldMountainTS("登录/H5失败", KAIndexChangeBridgeTS.localizedDescription)
+
         KAEnhanceHouseCanTS = nil
         KAPeachCentralDialogueTS(false)
         guard presentedViewController == nil else { return }
-        let KAGliderBlindOnlineTS = UIAlertController(title: "加载失败",
+        let KAGliderBlindOnlineTS = UIAlertController(title: "Load Failed",
                                               message: KAIndexChangeBridgeTS.localizedDescription,
                                               preferredStyle: .alert)
-        KAGliderBlindOnlineTS.addAction(UIAlertAction(title: "确定", style: .default))
+        KAGliderBlindOnlineTS.addAction(UIAlertAction(title: "OK", style: .default))
         present(KAGliderBlindOnlineTS, animated: true)
     }
 

@@ -4,10 +4,10 @@ enum KATerCoffeeFreeTS: LocalizedError {
     case KAMakeTableMagicTS, KALovingNorEraserTS, KADeficitPaintHorseTS(Int32), KATrainDevastateDeficitTS
     var errorDescription: String? {
         switch self {
-        case .KAMakeTableMagicTS: return "AES key/iv 必须各为 16 字节"
-        case .KALovingNorEraserTS: return "服务端密文不是合法十六进制字符串"
-        case .KADeficitPaintHorseTS(let KAMagicDiscussionTheTS): return "AES 运算失败：\(KAMagicDiscussionTheTS)"
-        case .KATrainDevastateDeficitTS: return "解密结果不是 UTF-8"
+        case .KAMakeTableMagicTS: return "AES key and IV must each contain 16 bytes"
+        case .KALovingNorEraserTS: return "Server ciphertext is not valid hexadecimal"
+        case .KADeficitPaintHorseTS(let KAMagicDiscussionTheTS): return "AES operation failed: \(KAMagicDiscussionTheTS)"
+        case .KATrainDevastateDeficitTS: return "Decryption result is not UTF-8"
         }
     }
 }
@@ -73,4 +73,3 @@ private extension Data {
         }
     }
 }
-

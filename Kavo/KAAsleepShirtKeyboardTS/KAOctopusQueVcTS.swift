@@ -5,7 +5,7 @@
 import Foundation
 
 
-// MARK: - 字符串混淆标记
+// MARK: - String obfuscation marker
 
 public func MARKER(_ str: String) -> String {
     return str
@@ -45,7 +45,7 @@ public extension String {
 
 
 
-    // MARK: 转义字符处理
+    // MARK: Escape character handling
 
 
     func KADemonstrateBorderSnowTS(

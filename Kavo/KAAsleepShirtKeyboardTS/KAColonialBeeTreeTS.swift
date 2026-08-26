@@ -10,7 +10,7 @@ struct KAintOppOptionTS: Decodable {
         } else if let KASourBiologicalFileTS = try? KAMonkeyZeroSnakeTS.decode(String.self), let KADimensionMelonMouseTS = Int(KASourBiologicalFileTS) {
             KAIndexAthleticInfoTS = KADimensionMelonMouseTS
         } else {
-            throw DecodingError.dataCorruptedError(in: KAMonkeyZeroSnakeTS, debugDescription: "需要整数或整数字符串")
+            throw DecodingError.dataCorruptedError(in: KAMonkeyZeroSnakeTS, debugDescription: "Expected an integer or an integer string")
         }
     }
 }
@@ -58,4 +58,3 @@ enum KAXrcSoleToolTS: String {
     case KACarDrpWaterTS = "InitiateCheckout"
     case KAScreenSlimeNetTS = "Purchase"
 }
-

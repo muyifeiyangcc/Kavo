@@ -33,7 +33,7 @@ final class StoreKit1PurchaseManager: NSObject, SKProductsRequestDelegate, SKPay
 
     func KABindComplainDownTS() {
         SKPaymentQueue.default().add(self)
-        KADespitePotionBigTS.KAInterCentralDisplayTS.KABoomGoldMountainTS("StoreKit1", "交易观察者已在 App 启动时注册")
+
     }
 
     func KASupportColorsShadowTS() { SKPaymentQueue.default().remove(self) }
@@ -67,7 +67,7 @@ final class StoreKit1PurchaseManager: NSObject, SKProductsRequestDelegate, SKPay
                                                    KABeeEarthSayTS: nil,
                                                    KAListAnySauceTS: nil))
         KAVerSlimeScouringTS(.KAArrestBigBinTS("Loading product information…"))
-        KADespitePotionBigTS.KAInterCentralDisplayTS.KABoomGoldMountainTS("StoreKit1", "查询 KAAsleepShirtKeyboardTS 商品 Product ID=\(KAShirtDreamsSixTS)")
+
         let KAScouringTracksClientTS = SKProductsRequest(productIdentifiers: [KAShirtDreamsSixTS])
         KAComplainCryArsenalTS = KAScouringTracksClientTS
         KAScouringTracksClientTS.delegate = self
@@ -95,7 +95,7 @@ final class StoreKit1PurchaseManager: NSObject, SKProductsRequestDelegate, SKPay
         let KADorsalMobileStreetTS = SKMutablePayment(product: KAJoyCoffeeWhaleTS)
         KADorsalMobileStreetTS.quantity = 1
         KAVerSlimeScouringTS(.KAArrestBigBinTS("Waiting for payment confirmation…"))
-        KADespitePotionBigTS.KAInterCentralDisplayTS.KABoomGoldMountainTS("StoreKit1", "商品查询成功：\(KAJoyCoffeeWhaleTS.productIdentifier)，价格=\(KAJoyCoffeeWhaleTS.price)，加入支付队列")
+
         SKPaymentQueue.default().add(KADorsalMobileStreetTS)
     }
 
@@ -116,7 +116,7 @@ final class StoreKit1PurchaseManager: NSObject, SKProductsRequestDelegate, SKPay
         KAMaxKnowWantTS = nil
         let KATreeVineChanceTS = KAAcheMusicDragonTS
         KAAcheMusicDragonTS.removeAll()
-        KADespitePotionBigTS.KAInterCentralDisplayTS.KABoomGoldMountainTS("StoreKit1", "Receipt 刷新完成，继续验单")
+
         KATreeVineChanceTS.forEach(KABridgeImageKnightTS)
     }
 
@@ -137,7 +137,7 @@ final class StoreKit1PurchaseManager: NSObject, SKProductsRequestDelegate, SKPay
                 queue.finishTransaction(KATeacherConcentrateTracksTS)
                 KACloudLineBusyTS()
                 if KAIndexChangeBridgeTS?.domain == SKErrorDomain, KAIndexChangeBridgeTS?.code == SKError.paymentCancelled.rawValue {
-                    KADespitePotionBigTS.KAInterCentralDisplayTS.KABoomGoldMountainTS("StoreKit1", "用户取消支付")
+
                     KAVerSlimeScouringTS(.KASeeLaptopPerfectTS)
                 } else {
                     KAVerSlimeScouringTS(.KACallLineHatTS("Payment failed: \(KATeacherConcentrateTracksTS.error?.localizedDescription ?? "Unknown error")"))
@@ -155,15 +155,15 @@ final class StoreKit1PurchaseManager: NSObject, SKProductsRequestDelegate, SKPay
         guard !KAElephantPrincePaintTS.contains(KAIndexLagInfoTS) else { return }
         if KASixDescFromTS(KAIndexLagInfoTS) {
             SKPaymentQueue.default().finishTransaction(KATeacherConcentrateTracksTS)
-            KADespitePotionBigTS.KAInterCentralDisplayTS.KABoomGoldMountainTS("StoreKit1", "重复回调已确认验单成功，直接 finishTransaction：\(KAIndexLagInfoTS)")
+
             return
         }
         guard let KABoomArrivalDreamsTS else {
-            KADespitePotionBigTS.KAInterCentralDisplayTS.KABoomGoldMountainTS("StoreKit1", "验单接口尚未配置，保留交易")
+
             return
         }
         guard let KACoatMorningSkyTS = KADetermineThemSnowingTS() else {
-            KADespitePotionBigTS.KAInterCentralDisplayTS.KABoomGoldMountainTS("StoreKit1", "交易缺少订单上下文，视为重复或历史回调；不向用户显示支付失败弹窗：\(KAIndexLagInfoTS)")
+
             return
         }
         guard KACoatMorningSkyTS.KAShirtDreamsSixTS == KATeacherConcentrateTracksTS.payment.productIdentifier else {
@@ -183,7 +183,7 @@ final class StoreKit1PurchaseManager: NSObject, SKProductsRequestDelegate, SKPay
         let KAOnlineMsgShirtTS = KADiscussionPigCityTS(KAGoodNetCoffeeTS: KACoatMorningSkyTS.KAGoodNetCoffeeTS)
         KAElephantPrincePaintTS.insert(KAIndexLagInfoTS)
         KAVerSlimeScouringTS(.KAArrestBigBinTS("Payment completed. Verifying purchase…"))
-        KADespitePotionBigTS.KAInterCentralDisplayTS.KABoomGoldMountainTS("StoreKit1", "调用 3.2.5 验单；收据与订单信息已脱敏")
+
         Task {
             do {
                 try await KABoomArrivalDreamsTS.KAGrazeTracksDisTS(KAIndexLagInfoTS: KAIndexLagInfoTS,
@@ -205,13 +205,13 @@ final class StoreKit1PurchaseManager: NSObject, SKProductsRequestDelegate, SKPay
                     self.KABrushColonialCallTS(KAIndexLagInfoTS)
                     SKPaymentQueue.default().finishTransaction(KATeacherConcentrateTracksTS)
                     self.KACloudLineBusyTS()
-                    KADespitePotionBigTS.KAInterCentralDisplayTS.KABoomGoldMountainTS("StoreKit1", "验单 code=0000；触发 Purchase 后已 finishTransaction")
+
                     self.KAVerSlimeScouringTS(.KALabelDegreeWoodTS("Payment successful"))
                 }
             } catch {
                 await MainActor.run {
                     self.KAElephantPrincePaintTS.remove(KAIndexLagInfoTS)
-                    KADespitePotionBigTS.KAInterCentralDisplayTS.KABoomGoldMountainTS("StoreKit1", "验单失败：\(error.localizedDescription)。交易未 finish")
+
                     self.KAVerSlimeScouringTS(.KACallLineHatTS("Payment completed, but verification failed: \(error.localizedDescription)\nThe transaction will be retried later."))
                 }
             }

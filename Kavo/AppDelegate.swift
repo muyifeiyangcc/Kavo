@@ -25,7 +25,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate, AdjustDelegate {
         Adjust.addGlobalCallbackParameter(KAAcheDesertInsectTS, forKey: "ta_distinct_id")
         if let KARainTwoMoonTS = ADJConfig(
             appToken: KAFlyShoesSeeTS.KACoatYourSweetTS,
-            environment: ADJEnvironmentSandbox
+            environment: ADJEnvironmentProduction
         ) {
             KARainTwoMoonTS.delegate = self
             #if DEBUG

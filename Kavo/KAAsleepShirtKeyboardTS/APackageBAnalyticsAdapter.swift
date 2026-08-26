@@ -44,10 +44,7 @@ final class APackageBAnalyticsAdapter: KAEraserOctopusDeeplyTS {
             }
             if !KAArsenalTameBorderTS.isEmpty {
                 KADiscussionBeeThemTS(KAArsenalTameBorderTS)
-                KADespitePotionBigTS.KAInterCentralDisplayTS.KABoomGoldMountainTS(
-                    "Adjust",
-                    "主动获取 adid 成功（第 \(KAHoorayAskGoldTS) 次）"
-                )
+
                 return KAArsenalTameBorderTS
             }
             if KAHoorayAskGoldTS < 3 {
@@ -57,10 +54,7 @@ final class APackageBAnalyticsAdapter: KAEraserOctopusDeeplyTS {
         #endif
 
         let KAMyEraserOffTS = KATracksMayAntiTS
-        KADespitePotionBigTS.KAInterCentralDisplayTS.KABoomGoldMountainTS(
-            "Adjust",
-            "主动获取 adid 失败，登录接口不会上传空值"
-        )
+
         return KAMyEraserOffTS
     }
 
@@ -71,10 +65,7 @@ final class APackageBAnalyticsAdapter: KAEraserOctopusDeeplyTS {
         KAWoodGuitarZooTS = KAGuitarDeficitSelectTS
         KAVillainOilDownTS.unlock()
 
-        KADespitePotionBigTS.KAInterCentralDisplayTS.KABoomGoldMountainTS(
-            "Adjust",
-            "收到归因回调，adid=\(KAYearKnightDeviceTS.isEmpty ? "空" : "非空")，ajResult=\(KAGuitarDeficitSelectTS.isEmpty ? "空字符串" : "非空")"
-        )
+
     }
 
     private func KADiscussionBeeThemTS(_ KAYearKnightDeviceTS: String) {
@@ -117,10 +108,7 @@ final class APackageBAnalyticsAdapter: KAEraserOctopusDeeplyTS {
             KABorderPrivacyBirthTS = KAFlyShoesSeeTS.KANorDisVocabularyTS
             KAHighShirtDorsalTS = KAFlyShoesSeeTS.KAMonkeySwordGrapeTS
         case .KACarDrpWaterTS:
-            KADespitePotionBigTS.KAInterCentralDisplayTS.KABoomGoldMountainTS(
-                "Adjust",
-                "InitiateCheckout 按最新规则不发送 Adjust SDK，只调用后端 ...j"
-            )
+
             return
         case .KAScreenSlimeNetTS:
             KABorderPrivacyBirthTS = KAFlyShoesSeeTS.KAPrivacyTreejoinTS
@@ -128,14 +116,14 @@ final class APackageBAnalyticsAdapter: KAEraserOctopusDeeplyTS {
         }
 
         guard let KASnowBirdShipTS = ADJEvent(eventToken: KABorderPrivacyBirthTS) else {
-            KADespitePotionBigTS.KAInterCentralDisplayTS.KABoomGoldMountainTS("Adjust", "无法创建 \(KAHighShirtDorsalTS) 事件")
+
             return
         }
         if KAUntilCenterCountTS == .KAScreenSlimeNetTS {
             guard let KABeeEarthSayTS,
                   let KAListAnySauceTS,
                   !KAListAnySauceTS.isEmpty else {
-                KADespitePotionBigTS.KAInterCentralDisplayTS.KABoomGoldMountainTS("Adjust", "Purchase 缺少 StoreKit 实际金额或币种，已拒绝发送")
+
                 return
             }
             KASnowBirdShipTS.setRevenue(
@@ -144,7 +132,7 @@ final class APackageBAnalyticsAdapter: KAEraserOctopusDeeplyTS {
             )
         }
         Adjust.trackEvent(KASnowBirdShipTS)
-        KADespitePotionBigTS.KAInterCentralDisplayTS.KABoomGoldMountainTS("Adjust", "已发送 SDK 事件 \(KAHighShirtDorsalTS)")
+
     }
 
     @MainActor
@@ -174,15 +162,12 @@ final class APackageBAnalyticsAdapter: KAEraserOctopusDeeplyTS {
             didFinishLaunchingWithOptions: KAFlowerUseDependTS
         )
         KAWinChairBoatTS = true
-        KADespitePotionBigTS.KAInterCentralDisplayTS.KABoomGoldMountainTS(
-            "Facebook",
-            "已使用持久化配置初始化 SDK"
-        )
+
     }
 
     func KAWindWinCoffeeTS(KABeeEarthSayTS: Decimal, KAListAnySauceTS: String) {
         guard KAWinChairBoatTS else {
-            KADespitePotionBigTS.KAInterCentralDisplayTS.KABoomGoldMountainTS("Facebook", "SDK 尚未初始化，Purchase 未发送")
+
             return
         }
         AppEvents.shared.logPurchase(
@@ -190,9 +175,6 @@ final class APackageBAnalyticsAdapter: KAEraserOctopusDeeplyTS {
             currency: KAListAnySauceTS,
             parameters: [AppEvents.ParameterName("fb_mobile_purchase"): "true"]
         )
-        KADespitePotionBigTS.KAInterCentralDisplayTS.KABoomGoldMountainTS(
-            "Facebook",
-            "已发送 Purchase，金额=\(KABeeEarthSayTS)，币种=\(KAListAnySauceTS)"
-        )
+
     }
 }

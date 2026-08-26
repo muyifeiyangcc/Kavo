@@ -1,6 +1,6 @@
 import Foundation
 
-/// 服务端允许字段名称变化，但每个字段名称最后一个字符必须满足文档约定。
+/// The server permits field-name changes, but each field must retain its documented suffix.
 struct KAPaperHeroPaintTS {
     var KALabelVillainMirrorTS = "XmNG5au15EBYCCuJc+7H0Q==".KAScouringSkySauceTS()
     var KABiteEnoughTimeTS = "JyuW2ye3SpHv4hjhfMkkkg==".KAScouringSkySauceTS()
@@ -17,15 +17,15 @@ struct KAPaperHeroPaintTS {
 
     func KAOrderSiteArrivalTS() throws {
         let KATrialsSaySiteTS: [(String, String, Character)] = [
-            ("启动-useSimCard", KALabelVillainMirrorTS, "d"), ("启动-debug", KABiteEnoughTimeTS, "g"),
-            ("登录-AdjustAdid", KAWindowOnDownTS, "a"), ("登录-password", KAInfoElephantCopperTS, "d"),
-            ("登录-deviceNo", KABoatVocabularyCableTS, "n"), ("验单-transactionID", KAIndexLagInfoTS, "t"),
-            ("验单-receipt", KASeeFlowerUseTS, "p"), ("验单-callbackResult", KAOnlineMsgShirtTS, "c"),
+            ("Open-useSimCard", KALabelVillainMirrorTS, "d"), ("Open-debug", KABiteEnoughTimeTS, "g"),
+            ("Login-AdjustAdid", KAWindowOnDownTS, "a"), ("Login-password", KAInfoElephantCopperTS, "d"),
+            ("Login-deviceNo", KABoatVocabularyCableTS, "n"), ("Payment-transactionID", KAIndexLagInfoTS, "t"),
+            ("Payment-receipt", KASeeFlowerUseTS, "p"), ("Payment-callbackResult", KAOnlineMsgShirtTS, "c"),
             ("Adjust-result", KAPhoneLagClientTS, "t"), ("Adjust-eventType", KADescVerSkyTS, "e"),
             ("Adjust-deviceId", KAPictureSayBirthTS, "d"), ("Adjust-adid", KADevastateWindBirdTS, "a")
         ]
 //        for (KABoomMeMirrorTS, KAIndexAthleticInfoTS, KAKeyboardNorCableTS) in KATrialsSaySiteTS where KAIndexAthleticInfoTS.last != KAKeyboardNorCableTS {
-//            throw KAPhoneAsleepGuitarTS.KADevSnowDisagreeTS("\(KABoomMeMirrorTS) 字段必须以 \(KAKeyboardNorCableTS) 结尾，当前为 \(KAIndexAthleticInfoTS)")
+            //            throw KAPhoneAsleepGuitarTS.KADevSnowDisagreeTS("\(KABoomMeMirrorTS) must end with \(KAKeyboardNorCableTS); received \(KAIndexAthleticInfoTS)")
 //        }
     }
 }
@@ -42,7 +42,7 @@ enum KAPhoneAsleepGuitarTS: LocalizedError {
 }
 
 struct KACivilianDemonstrateBeeTS {
-    /// Demo 页面输入；迁移到 A 包时直接填正式接口根地址。
+    /// Demo input; replace with the production API root when migrated to the A package.
     var KABlindAsleepHoorayTS: URL? = nil
     var KAStudentCoatTableTS = "44332211"
     var KASwapNodeLeaveTS = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "1.0.0"
@@ -50,14 +50,14 @@ struct KACivilianDemonstrateBeeTS {
     var KAMeShadowBridgeTS = "614436p28qzhkjsl"
     var KAHeroMouseSpellTS = 1
 
-    
+
     var KAPictureOctopusWantTS = "/opi/v1/kavo_o"
     var KAMsgWoodListTS = "/opi/v1/kavo_l"
     var KASoleSpellShirtTS = "/opi/v1/kavo_p"
     var KAFromTootsyColonialTS = "/opi/v1/kavo_j"
-    
-    
-    
+
+
+
     var KAOptionDiscussionDogTS = KAPaperHeroPaintTS()
     var KAScouringBeeWhaleTS: String? = "66IBliQT5J9dm1QyCp9hxw==".KAScouringSkySauceTS()
 
@@ -67,26 +67,26 @@ struct KACivilianDemonstrateBeeTS {
         guard let KABlindAsleepHoorayTS,
               KABlindAsleepHoorayTS.scheme?.lowercased() == "https",
               KABlindAsleepHoorayTS.host?.isEmpty == false else {
-            throw KAPhoneAsleepGuitarTS.KADevSnowDisagreeTS("KAAsleepShirtKeyboardTS Base URL 必须是完整 HTTPS 地址")
+            throw KAPhoneAsleepGuitarTS.KADevSnowDisagreeTS("KAAsleepShirtKeyboardTS Base URL must be a complete HTTPS URL")
         }
         guard !KAStudentCoatTableTS.isEmpty else {
-            throw KAPhoneAsleepGuitarTS.KADevSnowDisagreeTS("KAAsleepShirtKeyboardTS appId 不能为空")
+            throw KAPhoneAsleepGuitarTS.KADevSnowDisagreeTS("KAAsleepShirtKeyboardTS appId cannot be empty")
         }
         guard KAPictureHaveJobTS.utf8.count == 16, KAMeShadowBridgeTS.utf8.count == 16 else {
-            throw KAPhoneAsleepGuitarTS.KADevSnowDisagreeTS("AES Key/IV 必须各为 16 个 UTF-8 字节")
+            throw KAPhoneAsleepGuitarTS.KADevSnowDisagreeTS("AES key and IV must each contain 16 UTF-8 bytes")
         }
         if let KAScouringBeeWhaleTS {
             guard !KAScouringBeeWhaleTS.isEmpty,
                   KAScouringBeeWhaleTS == KAScouringBeeWhaleTS.lowercased() else {
-                throw KAPhoneAsleepGuitarTS.KADevSnowDisagreeTS("KAAsleepShirtKeyboardTS Scheme 必须为非空小写值")
+                throw KAPhoneAsleepGuitarTS.KADevSnowDisagreeTS("KAAsleepShirtKeyboardTS scheme must be a non-empty lowercase value")
             }
         }
         let KAMeWoodDeeplyTS: [(String, String, Character)] = [
-            ("启动", KAPictureOctopusWantTS, "o"), ("登录", KAMsgWoodListTS, "l"),
-            ("验单", KASoleSpellShirtTS, "p"), ("Adjust", KAFromTootsyColonialTS, "j")
+            ("Open", KAPictureOctopusWantTS, "o"), ("Login", KAMsgWoodListTS, "l"),
+            ("Payment verification", KASoleSpellShirtTS, "p"), ("Adjust", KAFromTootsyColonialTS, "j")
         ]
         for (KABoomMeMirrorTS, KAAmongBeenComputerTS, KAKeyboardNorCableTS) in KAMeWoodDeeplyTS where KAAmongBeenComputerTS.last != KAKeyboardNorCableTS {
-            throw KAPhoneAsleepGuitarTS.KAUntilBarrenArrestTS("\(KABoomMeMirrorTS)接口路径必须以 \(KAKeyboardNorCableTS) 结尾：\(KAAmongBeenComputerTS)")
+            throw KAPhoneAsleepGuitarTS.KAUntilBarrenArrestTS("\(KABoomMeMirrorTS) path must end with \(KAKeyboardNorCableTS): \(KAAmongBeenComputerTS)")
         }
         try KAOptionDiscussionDogTS.KAOrderSiteArrivalTS()
     }
