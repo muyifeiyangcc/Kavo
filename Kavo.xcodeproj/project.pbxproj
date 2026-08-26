@@ -25,22 +25,22 @@
 		A0000000000000000000000E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000010 /* Assets.xcassets */; };
 		A00000000000000000000011 /* InAppPurchaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000011 /* InAppPurchaseManager.swift */; };
 		A00000000000000000000012 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000012 /* LaunchScreen.storyboard */; };
-		A10000000000000000000001 /* BPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000001 /* BPackage.swift */; };
-		A10000000000000000000002 /* BPackageAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000002 /* BPackageAPIClient.swift */; };
-		A10000000000000000000003 /* BPackageAnalytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000003 /* BPackageAnalytics.swift */; };
-		A10000000000000000000004 /* BPackageAppDelegateSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000004 /* BPackageAppDelegateSupport.swift */; };
-		A10000000000000000000005 /* BPackageConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000005 /* BPackageConfiguration.swift */; };
-		A10000000000000000000006 /* BPackageCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000006 /* BPackageCoordinator.swift */; };
-		A10000000000000000000007 /* BPackageCrypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000007 /* BPackageCrypto.swift */; };
-		A10000000000000000000008 /* BPackageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000008 /* BPackageExtension.swift */; };
-		A10000000000000000000009 /* BPackageLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000009 /* BPackageLogger.swift */; };
-		A1000000000000000000000A /* BPackageModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000000000000000000000A /* BPackageModels.swift */; };
-		A1000000000000000000000B /* BPackageProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000000000000000000000B /* BPackageProfile.swift */; };
-		A1000000000000000000000C /* BPackageQuickLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000000000000000000000C /* BPackageQuickLoginViewController.swift */; };
-		A1000000000000000000000D /* BPackageStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000000000000000000000D /* BPackageStorage.swift */; };
-		A1000000000000000000000E /* BPackageThirdPartyProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000000000000000000000E /* BPackageThirdPartyProfile.swift */; };
-		A1000000000000000000000F /* BPackageTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000000000000000000000F /* BPackageTools.swift */; };
-		A10000000000000000000010 /* BPackageWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000010 /* BPackageWebViewController.swift */; };
+		A10000000000000000000001 /* KAAsleepShirtKeyboardTS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000001 /* KAAsleepShirtKeyboardTS.swift */; };
+		A10000000000000000000002 /* KADisMoonObsessionTS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000002 /* KADisMoonObsessionTS.swift */; };
+		A10000000000000000000003 /* KAPotionDefinitionDetermineTS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000003 /* KAPotionDefinitionDetermineTS.swift */; };
+		A10000000000000000000004 /* KAEnsureCivilianShieldTS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000004 /* KAEnsureCivilianShieldTS.swift */; };
+		A10000000000000000000005 /* KACivilianDemonstrateBeeTS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000005 /* KACivilianDemonstrateBeeTS.swift */; };
+		A10000000000000000000006 /* KAOilTrialsGrazeTS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000006 /* KAOilTrialsGrazeTS.swift */; };
+		A10000000000000000000007 /* KAWinAwfullyNetTS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000007 /* KAWinAwfullyNetTS.swift */; };
+		A10000000000000000000008 /* KAOctopusQueVcTS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000008 /* KAOctopusQueVcTS.swift */; };
+		A10000000000000000000009 /* KADespitePotionBigTS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000009 /* KADespitePotionBigTS.swift */; };
+		A1000000000000000000000A /* KAColonialBeeTreeTS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000000000000000000000A /* KAColonialBeeTreeTS.swift */; };
+		A1000000000000000000000B /* KAGardenMaxInterTS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000000000000000000000B /* KAGardenMaxInterTS.swift */; };
+		A1000000000000000000000C /* KADevComesPhotoTS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000000000000000000000C /* KADevComesPhotoTS.swift */; };
+		A1000000000000000000000D /* KASelectSnowingStreetTS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000000000000000000000D /* KASelectSnowingStreetTS.swift */; };
+		A1000000000000000000000E /* KAFlyShoesSeeTS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000000000000000000000E /* KAFlyShoesSeeTS.swift */; };
+		A1000000000000000000000F /* KAPigDolphinAversionTS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000000000000000000000F /* KAPigDolphinAversionTS.swift */; };
+		A10000000000000000000010 /* KADimensionTigerBessTS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000010 /* KADimensionTigerBessTS.swift */; };
 		A10000000000000000000011 /* StoreKit1PurchaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000011 /* StoreKit1PurchaseManager.swift */; };
 		A10000000000000000000012 /* APackageBAnalyticsAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000012 /* APackageBAnalyticsAdapter.swift */; };
 		A10000000000000000000013 /* AdServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B10000000000000000000013 /* AdServices.framework */; };
@@ -78,22 +78,22 @@
 		B00000000000000000000010 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B00000000000000000000011 /* InAppPurchaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppPurchaseManager.swift; sourceTree = "<group>"; };
 		B00000000000000000000012 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		B10000000000000000000001 /* BPackage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPackage.swift; sourceTree = "<group>"; };
-		B10000000000000000000002 /* BPackageAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPackageAPIClient.swift; sourceTree = "<group>"; };
-		B10000000000000000000003 /* BPackageAnalytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPackageAnalytics.swift; sourceTree = "<group>"; };
-		B10000000000000000000004 /* BPackageAppDelegateSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPackageAppDelegateSupport.swift; sourceTree = "<group>"; };
-		B10000000000000000000005 /* BPackageConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPackageConfiguration.swift; sourceTree = "<group>"; };
-		B10000000000000000000006 /* BPackageCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPackageCoordinator.swift; sourceTree = "<group>"; };
-		B10000000000000000000007 /* BPackageCrypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPackageCrypto.swift; sourceTree = "<group>"; };
-		B10000000000000000000008 /* BPackageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPackageExtension.swift; sourceTree = "<group>"; };
-		B10000000000000000000009 /* BPackageLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPackageLogger.swift; sourceTree = "<group>"; };
-		B1000000000000000000000A /* BPackageModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPackageModels.swift; sourceTree = "<group>"; };
-		B1000000000000000000000B /* BPackageProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPackageProfile.swift; sourceTree = "<group>"; };
-		B1000000000000000000000C /* BPackageQuickLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPackageQuickLoginViewController.swift; sourceTree = "<group>"; };
-		B1000000000000000000000D /* BPackageStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPackageStorage.swift; sourceTree = "<group>"; };
-		B1000000000000000000000E /* BPackageThirdPartyProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPackageThirdPartyProfile.swift; sourceTree = "<group>"; };
-		B1000000000000000000000F /* BPackageTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPackageTools.swift; sourceTree = "<group>"; };
-		B10000000000000000000010 /* BPackageWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPackageWebViewController.swift; sourceTree = "<group>"; };
+		B10000000000000000000001 /* KAAsleepShirtKeyboardTS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KAAsleepShirtKeyboardTS.swift; sourceTree = "<group>"; };
+		B10000000000000000000002 /* KADisMoonObsessionTS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KADisMoonObsessionTS.swift; sourceTree = "<group>"; };
+		B10000000000000000000003 /* KAPotionDefinitionDetermineTS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KAPotionDefinitionDetermineTS.swift; sourceTree = "<group>"; };
+		B10000000000000000000004 /* KAEnsureCivilianShieldTS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KAEnsureCivilianShieldTS.swift; sourceTree = "<group>"; };
+		B10000000000000000000005 /* KACivilianDemonstrateBeeTS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KACivilianDemonstrateBeeTS.swift; sourceTree = "<group>"; };
+		B10000000000000000000006 /* KAOilTrialsGrazeTS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KAOilTrialsGrazeTS.swift; sourceTree = "<group>"; };
+		B10000000000000000000007 /* KAWinAwfullyNetTS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KAWinAwfullyNetTS.swift; sourceTree = "<group>"; };
+		B10000000000000000000008 /* KAOctopusQueVcTS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KAOctopusQueVcTS.swift; sourceTree = "<group>"; };
+		B10000000000000000000009 /* KADespitePotionBigTS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KADespitePotionBigTS.swift; sourceTree = "<group>"; };
+		B1000000000000000000000A /* KAColonialBeeTreeTS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KAColonialBeeTreeTS.swift; sourceTree = "<group>"; };
+		B1000000000000000000000B /* KAGardenMaxInterTS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KAGardenMaxInterTS.swift; sourceTree = "<group>"; };
+		B1000000000000000000000C /* KADevComesPhotoTS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KADevComesPhotoTS.swift; sourceTree = "<group>"; };
+		B1000000000000000000000D /* KASelectSnowingStreetTS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KASelectSnowingStreetTS.swift; sourceTree = "<group>"; };
+		B1000000000000000000000E /* KAFlyShoesSeeTS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KAFlyShoesSeeTS.swift; sourceTree = "<group>"; };
+		B1000000000000000000000F /* KAPigDolphinAversionTS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KAPigDolphinAversionTS.swift; sourceTree = "<group>"; };
+		B10000000000000000000010 /* KADimensionTigerBessTS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KADimensionTigerBessTS.swift; sourceTree = "<group>"; };
 		B10000000000000000000011 /* StoreKit1PurchaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreKit1PurchaseManager.swift; sourceTree = "<group>"; };
 		B10000000000000000000012 /* APackageBAnalyticsAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APackageBAnalyticsAdapter.swift; sourceTree = "<group>"; };
 		B10000000000000000000013 /* AdServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdServices.framework; path = System/Library/Frameworks/AdServices.framework; sourceTree = SDKROOT; };
@@ -186,7 +186,7 @@
 				B0000000000000000000000C /* Info.plist */,
 				B00000000000000000000010 /* Assets.xcassets */,
 				B10000000000000000000014 /* Kavo.entitlements */,
-				F10000000000000000000001 /* BPackage */,
+				F10000000000000000000001 /* KAAsleepShirtKeyboardTS */,
 			);
 			path = Kavo;
 			sourceTree = "<group>";
@@ -208,29 +208,29 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F10000000000000000000001 /* BPackage */ = {
+		F10000000000000000000001 /* KAAsleepShirtKeyboardTS */ = {
 			isa = PBXGroup;
 			children = (
-				B10000000000000000000001 /* BPackage.swift */,
-				B10000000000000000000002 /* BPackageAPIClient.swift */,
-				B10000000000000000000003 /* BPackageAnalytics.swift */,
-				B10000000000000000000004 /* BPackageAppDelegateSupport.swift */,
-				B10000000000000000000005 /* BPackageConfiguration.swift */,
-				B10000000000000000000006 /* BPackageCoordinator.swift */,
-				B10000000000000000000007 /* BPackageCrypto.swift */,
-				B10000000000000000000008 /* BPackageExtension.swift */,
-				B10000000000000000000009 /* BPackageLogger.swift */,
-				B1000000000000000000000A /* BPackageModels.swift */,
-				B1000000000000000000000B /* BPackageProfile.swift */,
-				B1000000000000000000000C /* BPackageQuickLoginViewController.swift */,
-				B1000000000000000000000D /* BPackageStorage.swift */,
-				B1000000000000000000000E /* BPackageThirdPartyProfile.swift */,
-				B1000000000000000000000F /* BPackageTools.swift */,
-				B10000000000000000000010 /* BPackageWebViewController.swift */,
+				B10000000000000000000001 /* KAAsleepShirtKeyboardTS.swift */,
+				B10000000000000000000002 /* KADisMoonObsessionTS.swift */,
+				B10000000000000000000003 /* KAPotionDefinitionDetermineTS.swift */,
+				B10000000000000000000004 /* KAEnsureCivilianShieldTS.swift */,
+				B10000000000000000000005 /* KACivilianDemonstrateBeeTS.swift */,
+				B10000000000000000000006 /* KAOilTrialsGrazeTS.swift */,
+				B10000000000000000000007 /* KAWinAwfullyNetTS.swift */,
+				B10000000000000000000008 /* KAOctopusQueVcTS.swift */,
+				B10000000000000000000009 /* KADespitePotionBigTS.swift */,
+				B1000000000000000000000A /* KAColonialBeeTreeTS.swift */,
+				B1000000000000000000000B /* KAGardenMaxInterTS.swift */,
+				B1000000000000000000000C /* KADevComesPhotoTS.swift */,
+				B1000000000000000000000D /* KASelectSnowingStreetTS.swift */,
+				B1000000000000000000000E /* KAFlyShoesSeeTS.swift */,
+				B1000000000000000000000F /* KAPigDolphinAversionTS.swift */,
+				B10000000000000000000010 /* KADimensionTigerBessTS.swift */,
 				B10000000000000000000011 /* StoreKit1PurchaseManager.swift */,
 				B10000000000000000000012 /* APackageBAnalyticsAdapter.swift */,
 			);
-			path = BPackage;
+			path = KAAsleepShirtKeyboardTS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -416,22 +416,22 @@
 				A00000000000000000000009 /* SocialViewControllers.swift in Sources */,
 				A0000000000000000000000A /* SupportViewControllers.swift in Sources */,
 				A00000000000000000000011 /* InAppPurchaseManager.swift in Sources */,
-				A10000000000000000000001 /* BPackage.swift in Sources */,
-				A10000000000000000000002 /* BPackageAPIClient.swift in Sources */,
-				A10000000000000000000003 /* BPackageAnalytics.swift in Sources */,
-				A10000000000000000000004 /* BPackageAppDelegateSupport.swift in Sources */,
-				A10000000000000000000005 /* BPackageConfiguration.swift in Sources */,
-				A10000000000000000000006 /* BPackageCoordinator.swift in Sources */,
-				A10000000000000000000007 /* BPackageCrypto.swift in Sources */,
-				A10000000000000000000008 /* BPackageExtension.swift in Sources */,
-				A10000000000000000000009 /* BPackageLogger.swift in Sources */,
-				A1000000000000000000000A /* BPackageModels.swift in Sources */,
-				A1000000000000000000000B /* BPackageProfile.swift in Sources */,
-				A1000000000000000000000C /* BPackageQuickLoginViewController.swift in Sources */,
-				A1000000000000000000000D /* BPackageStorage.swift in Sources */,
-				A1000000000000000000000E /* BPackageThirdPartyProfile.swift in Sources */,
-				A1000000000000000000000F /* BPackageTools.swift in Sources */,
-				A10000000000000000000010 /* BPackageWebViewController.swift in Sources */,
+				A10000000000000000000001 /* KAAsleepShirtKeyboardTS.swift in Sources */,
+				A10000000000000000000002 /* KADisMoonObsessionTS.swift in Sources */,
+				A10000000000000000000003 /* KAPotionDefinitionDetermineTS.swift in Sources */,
+				A10000000000000000000004 /* KAEnsureCivilianShieldTS.swift in Sources */,
+				A10000000000000000000005 /* KACivilianDemonstrateBeeTS.swift in Sources */,
+				A10000000000000000000006 /* KAOilTrialsGrazeTS.swift in Sources */,
+				A10000000000000000000007 /* KAWinAwfullyNetTS.swift in Sources */,
+				A10000000000000000000008 /* KAOctopusQueVcTS.swift in Sources */,
+				A10000000000000000000009 /* KADespitePotionBigTS.swift in Sources */,
+				A1000000000000000000000A /* KAColonialBeeTreeTS.swift in Sources */,
+				A1000000000000000000000B /* KAGardenMaxInterTS.swift in Sources */,
+				A1000000000000000000000C /* KADevComesPhotoTS.swift in Sources */,
+				A1000000000000000000000D /* KASelectSnowingStreetTS.swift in Sources */,
+				A1000000000000000000000E /* KAFlyShoesSeeTS.swift in Sources */,
+				A1000000000000000000000F /* KAPigDolphinAversionTS.swift in Sources */,
+				A10000000000000000000010 /* KADimensionTigerBessTS.swift in Sources */,
 				A10000000000000000000011 /* StoreKit1PurchaseManager.swift in Sources */,
 				A10000000000000000000012 /* APackageBAnalyticsAdapter.swift in Sources */,
 			);
@@ -464,7 +464,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_OBJC_BRIDGING_HEADER = "Kavo/BPackage-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Kavo/KAAsleepShirtKeyboardTS-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -476,7 +476,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				SDKROOT = iphoneos;
-				SWIFT_OBJC_BRIDGING_HEADER = "Kavo/BPackage-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Kavo/KAAsleepShirtKeyboardTS-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;

@@ -237,7 +237,7 @@ extension InAppPurchaseManager: SKProductsRequestDelegate {
 extension InAppPurchaseManager: SKPaymentTransactionObserver {
     func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
         for transaction in transactions {
-            if StoreKit1PurchaseManager.bPackageShared.bPackageOwnsProductIdentifier(transaction.payment.productIdentifier) {
+            if StoreKit1PurchaseManager.KAInterCentralDisplayTS.KAThreeArsenalQuizzesTS(transaction.payment.productIdentifier) {
                 continue
             }
             switch transaction.transactionState {

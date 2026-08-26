@@ -15,48 +15,48 @@ final class AppDelegate: UIResponder, UIApplicationDelegate, AdjustDelegate {
         IQKeyboardToolbarManager.shared.isEnabled = true
         IQKeyboardManager.shared.resignOnTouchOutside = true
 
-        // MARK: - BPackage
-        APackageBAnalyticsAdapter.bPackageShared.bPackageInitializeFacebook(
-            bPackageApplication: application,
-            bPackageLaunchOptions: launchOptions
+        // MARK: - KAAsleepShirtKeyboardTS
+        APackageBAnalyticsAdapter.KAInterCentralDisplayTS.KACharacterClearDarlingTS(
+            KADearMinCollapseTS: application,
+            KAFlowerUseDependTS: launchOptions
         )
-        let bPackageAppID = BPackageProfile.bPackageConfiguration.bPackageAppID
-        let bPackageDeviceID = BPackageStorage.bPackageShared.bPackageStableDeviceID(bPackageAppID: bPackageAppID)
-        Adjust.addGlobalCallbackParameter(bPackageDeviceID, forKey: "ta_distinct_id")
-        if let bPackageAdjustConfig = ADJConfig(
-            appToken: BPackageThirdPartyProfile.bPackageAdjustAppToken,
+        let KAStudentCoatTableTS = KAGardenMaxInterTS.KADolphinBootYunTS.KAStudentCoatTableTS
+        let KAAcheDesertInsectTS = KASelectSnowingStreetTS.KAInterCentralDisplayTS.KARandomBootBrushTS(KAStudentCoatTableTS: KAStudentCoatTableTS)
+        Adjust.addGlobalCallbackParameter(KAAcheDesertInsectTS, forKey: "ta_distinct_id")
+        if let KARainTwoMoonTS = ADJConfig(
+            appToken: KAFlyShoesSeeTS.KACoatYourSweetTS,
             environment: ADJEnvironmentSandbox
         ) {
-            bPackageAdjustConfig.delegate = self
+            KARainTwoMoonTS.delegate = self
             #if DEBUG
-            bPackageAdjustConfig.logLevel = ADJLogLevel.verbose
+            KARainTwoMoonTS.logLevel = ADJLogLevel.verbose
             #else
-            bPackageAdjustConfig.logLevel = ADJLogLevel.suppress
+            KARainTwoMoonTS.logLevel = ADJLogLevel.suppress
             #endif
-            bPackageAdjustConfig.enableSendingInBackground()
-            bPackageAdjustConfig.enableCostDataInAttribution()
-            Adjust.initSdk(bPackageAdjustConfig)
+            KARainTwoMoonTS.enableSendingInBackground()
+            KARainTwoMoonTS.enableCostDataInAttribution()
+            Adjust.initSdk(KARainTwoMoonTS)
             Task {
-                _ = await APackageBAnalyticsAdapter.bPackageShared.bPackageResolveAdjustAdID()
+                _ = await APackageBAnalyticsAdapter.KAInterCentralDisplayTS.KADefinitionOceanLeaveTS()
             }
         }
         UNUserNotificationCenter.current().delegate = self
-        StoreKit1PurchaseManager.bPackageShared.bPackageStartObserving()
+        StoreKit1PurchaseManager.KAInterCentralDisplayTS.KABindComplainDownTS()
         InAppPurchaseManager.shared.start()
         return true
     }
 
     func adjustAttributionChanged(_ attribution: ADJAttribution?) {
-        Adjust.adid { bPackageAdID in
-            let bPackageNormalizedAdID = (bPackageAdID ?? "").trimmingCharacters(in: .whitespacesAndNewlines)
+        Adjust.adid { KAYearKnightDeviceTS in
+            let KABikeTimeAllyTS = (KAYearKnightDeviceTS ?? "").trimmingCharacters(in: .whitespacesAndNewlines)
             Task { @MainActor in
-                APackageBAnalyticsAdapter.bPackageShared.bPackageUpdateAttribution(
-                    bPackageAttribution: attribution,
-                    bPackageAdID: bPackageNormalizedAdID
+                APackageBAnalyticsAdapter.KAInterCentralDisplayTS.KAAsleepBeePhoneTS(
+                    KAWithPhotoSeabedTS: attribution,
+                    KAYearKnightDeviceTS: KABikeTimeAllyTS
                 )
-                BPackage.bPackageShared.bPackageAdjustAttributionChanged(
-                    bPackageResult: APackageBAnalyticsAdapter.bPackageShared.bPackageAttributionResult,
-                    bPackageAdID: bPackageNormalizedAdID
+                KAAsleepShirtKeyboardTS.KAInterCentralDisplayTS.KAFlatInfoCivilianTS(
+                    KAGuitarDeficitSelectTS: APackageBAnalyticsAdapter.KAInterCentralDisplayTS.KAGrazeNotebookOneTS,
+                    KAYearKnightDeviceTS: KABikeTimeAllyTS
                 )
             }
         }
@@ -64,12 +64,12 @@ final class AppDelegate: UIResponder, UIApplicationDelegate, AdjustDelegate {
 
     func application(_ application: UIApplication,
                      didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-        BPackageAppDelegateSupport.bPackageDidRegisterForRemoteNotifications(bPackageDeviceToken: deviceToken)
+        KAEnsureCivilianShieldTS.KABigDevVillainTS(KATeacherSiteDescTS: deviceToken)
     }
 
     func application(_ application: UIApplication,
                      didFailToRegisterForRemoteNotificationsWithError error: Error) {
-        BPackageLogger.bPackageShared.bPackageLog("推送", error.localizedDescription)
+        KADespitePotionBigTS.KAInterCentralDisplayTS.KABoomGoldMountainTS("推送", error.localizedDescription)
     }
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession,

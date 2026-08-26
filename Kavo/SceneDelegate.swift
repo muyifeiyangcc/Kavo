@@ -20,76 +20,76 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         }
 
         if AuthSessionStore.isSignedIn {
-            let bPackageAPackageRoot = MainTabBarController()
-            if Date.now.timeIntervalSince1970 <= BPackageProfile.bPackageOpenRequestCutoffTimestamp {
-                window.rootViewController = bPackageAPackageRoot
+            let KADesirePhoneTimeTS = MainTabBarController()
+            if Date.now.timeIntervalSince1970 <= KAGardenMaxInterTS.KADeeplyBiteChangeTS {
+                window.rootViewController = KADesirePhoneTimeTS
                 window.makeKeyAndVisible()
                 self.window = window
                 return
             }
-            let bPackageNavigationController = UINavigationController(rootViewController: bPackageAPackageRoot)
-            bPackageNavigationController.setNavigationBarHidden(true, animated: false)
-            window.rootViewController = bPackageNavigationController
+            let KAFreeCablePhoneTS = UINavigationController(rootViewController: KADesirePhoneTimeTS)
+            KAFreeCablePhoneTS.setNavigationBarHidden(true, animated: false)
+            window.rootViewController = KAFreeCablePhoneTS
             window.makeKeyAndVisible()
             self.window = window
-            bPackageStart(
-                bPackageNavigationController: bPackageNavigationController,
-                bPackageAPackageViewController: bPackageAPackageRoot
+            KAFlowerThemHugTS(
+                KAFreeCablePhoneTS: KAFreeCablePhoneTS,
+                KAPhoneAthleticJumpTS: KADesirePhoneTimeTS
             )
             return
         }
 
         let launch = LaunchViewController()
-        let bPackageNavigationController = UINavigationController(rootViewController: launch)
-        bPackageNavigationController.setNavigationBarHidden(true, animated: false)
-        window.rootViewController = bPackageNavigationController
+        let KAFreeCablePhoneTS = UINavigationController(rootViewController: launch)
+        KAFreeCablePhoneTS.setNavigationBarHidden(true, animated: false)
+        window.rootViewController = KAFreeCablePhoneTS
         window.makeKeyAndVisible()
         self.window = window
 
-        if Date.now.timeIntervalSince1970 <= BPackageProfile.bPackageOpenRequestCutoffTimestamp {
-            bPackageShowAPackageUnauthenticatedRoot()
+        if Date.now.timeIntervalSince1970 <= KAGardenMaxInterTS.KADeeplyBiteChangeTS {
+            KAMonkeyDevSeabedTS()
         } else {
-            bPackageStart(
-                bPackageNavigationController: bPackageNavigationController,
-                bPackageAPackageViewController: launch
+            KAFlowerThemHugTS(
+                KAFreeCablePhoneTS: KAFreeCablePhoneTS,
+                KAPhoneAthleticJumpTS: launch
             )
         }
     }
 
-    private func bPackageStart(bPackageNavigationController: UINavigationController,
-                               bPackageAPackageViewController: UIViewController) {
-        BPackage.bPackageShared.bPackageStart(
-            bPackageNavigationController: bPackageNavigationController,
-            bPackageConfiguration: BPackageProfile.bPackageConfiguration,
-            bPackageAPackageViewController: bPackageAPackageViewController,
-            bPackageAppearance: BPackageProfile.bPackageAppearance,
-            bPackageAnalyticsAdapter: APackageBAnalyticsAdapter.bPackageShared,
-            bPackageOnAPackageRoute: { [weak self] in
+    private func KAFlowerThemHugTS(KAFreeCablePhoneTS: UINavigationController,
+                               KAPhoneAthleticJumpTS: UIViewController) {
+        KAAsleepShirtKeyboardTS.KAInterCentralDisplayTS.KAFlowerThemHugTS(
+            KAFreeCablePhoneTS: KAFreeCablePhoneTS,
+            KADolphinBootYunTS: KAGardenMaxInterTS.KADolphinBootYunTS,
+            KAPhoneAthleticJumpTS: KAPhoneAthleticJumpTS,
+            KAFuncPigLiefTS: KAGardenMaxInterTS.KAFuncPigLiefTS,
+            KAEasyTwoThereTS: APackageBAnalyticsAdapter.KAInterCentralDisplayTS,
+            KAScouringOurJoyTS: { [weak self] in
                 guard let self else { return }
                 if AuthSessionStore.isSignedIn {
                     self.window?.rootViewController = MainTabBarController()
                 } else {
-                    self.bPackageShowAPackageUnauthenticatedRoot()
+                    self.KAMonkeyDevSeabedTS()
                 }
             }
         )
     }
 
-    private func bPackageShowAPackageUnauthenticatedRoot() {
-        let bPackageRoot = EULAConsentStore.hasAccepted
+    private func KAMonkeyDevSeabedTS() {
+        let KADreamsAversionMirrorTS = EULAConsentStore.hasAccepted
             ? WelcomeViewController()
             : EULAViewController()
-        guard let bPackageWindow = window else { return }
-        bPackageWindow.rootViewController = UINavigationController(rootViewController: bPackageRoot)
-        UIView.transition(with: bPackageWindow, duration: 0.35, options: .transitionCrossDissolve, animations: nil)
+        guard let KAPlaneWizardDateTS = window else { return }
+        KAPlaneWizardDateTS.rootViewController = UINavigationController(rootViewController: KADreamsAversionMirrorTS)
+        UIView.transition(with: KAPlaneWizardDateTS, duration: 0.35, options: .transitionCrossDissolve, animations: nil)
     }
 
     func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
-        guard let bPackageURL = URLContexts.first?.url else { return }
-        if bPackageURL.scheme?.lowercased() == BPackageProfile.bPackageConfiguration.bPackageExternalScheme {
-            _ = BPackage.bPackageShared.bPackageHandleOpenURL(bPackageURL)
+        guard let KAZeroLiefChanceTS = URLContexts.first?.url else { return }
+        if KAZeroLiefChanceTS.scheme?.lowercased() == KAGardenMaxInterTS.KADolphinBootYunTS.KAScouringBeeWhaleTS {
+            _ = KAAsleepShirtKeyboardTS.KAInterCentralDisplayTS.KABusyHatDesireTS(KAZeroLiefChanceTS)
             return
         }
-        _ = ApplicationDelegate.shared.application(UIApplication.shared, open: bPackageURL, options: [:])
+        _ = ApplicationDelegate.shared.application(UIApplication.shared, open: KAZeroLiefChanceTS, options: [:])
     }
 }

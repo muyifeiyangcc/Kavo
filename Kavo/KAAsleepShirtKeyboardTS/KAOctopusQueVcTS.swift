@@ -1,5 +1,5 @@
 //
-//  BPackageExtension.swift
+//  KAOctopusQueVcTS.swift
 //
 
 import Foundation
@@ -18,16 +18,16 @@ public func MARKER(_ str: String) -> String {
 public extension String {
 
 
-    func BPackagedddDecrypt() -> String {
+    func KAScouringSkySauceTS() -> String {
 
 
-        let key = "vixiavixiavixiax"
+        let key = "kavokavokavokavo"
         let iv = ""
 
 
 
         guard let result =
-                BPackageTools.BPackageAesDecrypt(
+                KAPigDolphinAversionTS.KAFlatCableNorTS(
                     text: self,
                     key: key,
                     iv: iv
@@ -38,7 +38,7 @@ public extension String {
 
 
 
-        return result.BPackageTransEscapeCharacter(
+        return result.KADemonstrateBorderSnowTS(
             isForward: false
         )
     }
@@ -48,7 +48,7 @@ public extension String {
     // MARK: 转义字符处理
 
 
-    func BPackageTransEscapeCharacter(
+    func KADemonstrateBorderSnowTS(
         isForward: Bool
     ) -> String {
 
