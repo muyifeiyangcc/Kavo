@@ -7,9 +7,9 @@ final class BPackageStorage {
     private init() {}
 
     private enum BPackageSecureKey: String {
-        case bPackageDeviceID = "devid"
-        case bPackageLoginToken = "token"
-        case bPackagePassword = "password"
+        case bPackageDeviceID = "aaadevid"
+        case bPackageLoginToken = "aaatoken"
+        case bPackagePassword = "aaapassword"
     }
 
     var bPackageDeviceID: String { get { bPackageRead(.bPackageDeviceID) ?? "" } set { bPackageSave(newValue, bPackageKey: .bPackageDeviceID) } }

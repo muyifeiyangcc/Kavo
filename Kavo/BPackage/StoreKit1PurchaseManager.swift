@@ -27,6 +27,7 @@ final class StoreKit1PurchaseManager: NSObject, SKProductsRequestDelegate, SKPay
     private var bPackageProcessingTransactions = Set<String>()
     private let bPackageContextKey = "bPackage.storeKit1.pendingPaymentContext"
     private let bPackageOwnedProductIDsKey = "bPackage.storeKit1.ownedProductIDs"
+    private let bPackageVerifiedTransactionIDsKey = "bPackage.storeKit1.verifiedTransactionIDs"
 
     private override init() { super.init() }
 
@@ -152,12 +153,18 @@ final class StoreKit1PurchaseManager: NSObject, SKProductsRequestDelegate, SKPay
             bPackageNotify(.bPackageFailure("The App Store did not return a transaction identifier. The transaction will be retried later.")); return
         }
         guard !bPackageProcessingTransactions.contains(bPackageTransactionID) else { return }
+        if bPackageHasVerifiedTransaction(bPackageTransactionID) {
+            SKPaymentQueue.default().finishTransaction(bPackageTransaction)
+            BPackageLogger.bPackageShared.bPackageLog("StoreKit1", "重复回调已确认验单成功，直接 finishTransaction：\(bPackageTransactionID)")
+            return
+        }
         guard let bPackageAPI else {
             BPackageLogger.bPackageShared.bPackageLog("StoreKit1", "验单接口尚未配置，保留交易")
             return
         }
         guard let bPackageContext = bPackageLoadContext() else {
-            bPackageNotify(.bPackageFailure("The order number is missing. Verification will be retried later.")); return
+            BPackageLogger.bPackageShared.bPackageLog("StoreKit1", "交易缺少订单上下文，视为重复或历史回调；不向用户显示支付失败弹窗：\(bPackageTransactionID)")
+            return
         }
         guard bPackageContext.bPackageBatchNo == bPackageTransaction.payment.productIdentifier else {
             bPackageNotify(.bPackageFailure("The purchased product does not match the order. Verification will be retried later.")); return
@@ -195,6 +202,7 @@ final class StoreKit1PurchaseManager: NSObject, SKProductsRequestDelegate, SKPay
                         bPackageAmount: bPackageAmount,
                         bPackageCurrency: bPackageCurrency
                     )
+                    self.bPackageRememberVerifiedTransaction(bPackageTransactionID)
                     SKPaymentQueue.default().finishTransaction(bPackageTransaction)
                     self.bPackageClearContext()
                     BPackageLogger.bPackageShared.bPackageLog("StoreKit1", "验单 code=0000；触发 Purchase 后已 finishTransaction")
@@ -234,6 +242,18 @@ final class StoreKit1PurchaseManager: NSObject, SKProductsRequestDelegate, SKPay
     }
 
     private func bPackageClearContext() { UserDefaults.standard.removeObject(forKey: bPackageContextKey) }
+
+    private func bPackageHasVerifiedTransaction(_ bPackageTransactionID: String) -> Bool {
+        let bPackageIDs = UserDefaults.standard.stringArray(forKey: bPackageVerifiedTransactionIDsKey) ?? []
+        return bPackageIDs.contains(bPackageTransactionID)
+    }
+
+    private func bPackageRememberVerifiedTransaction(_ bPackageTransactionID: String) {
+        var bPackageIDs = UserDefaults.standard.stringArray(forKey: bPackageVerifiedTransactionIDsKey) ?? []
+        guard !bPackageIDs.contains(bPackageTransactionID) else { return }
+        bPackageIDs.append(bPackageTransactionID)
+        UserDefaults.standard.set(bPackageIDs, forKey: bPackageVerifiedTransactionIDsKey)
+    }
 
     func bPackageOwnsProductIdentifier(_ bPackageProductIdentifier: String) -> Bool {
         let bPackageIDs = UserDefaults.standard.stringArray(forKey: bPackageOwnedProductIDsKey) ?? []
