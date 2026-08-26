@@ -7,9 +7,9 @@ final class KASelectSnowingStreetTS {
     private init() {}
 
     private enum KAAthleticScabFlyTS: String {
-        case KAAcheDesertInsectTS = "aaadevid"
-        case KASelectTrainHugTS = "aaatoken"
-        case KAInfoElephantCopperTS = "aaapassword"
+        case KAAcheDesertInsectTS = "devid"
+        case KASelectTrainHugTS = "token"
+        case KAInfoElephantCopperTS = "password"
     }
 
     var KAAcheDesertInsectTS: String { get { KAPrivacyDescDrpTS(.KAAcheDesertInsectTS) ?? "" } set { KAFromPhoneWindowTS(newValue, KAVineDataDialectTS: .KAAcheDesertInsectTS) } }

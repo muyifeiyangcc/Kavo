@@ -44,10 +44,10 @@ enum KAPhoneAsleepGuitarTS: LocalizedError {
 struct KACivilianDemonstrateBeeTS {
     /// Demo input; replace with the production API root when migrated to the A package.
     var KABlindAsleepHoorayTS: URL? = nil
-    var KAStudentCoatTableTS = "44332211"
+    var KAStudentCoatTableTS = "57926845"
     var KASwapNodeLeaveTS = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "1.0.0"
-    var KAPictureHaveJobTS = "518486he8pzgbjsk"
-    var KAMeShadowBridgeTS = "614436p28qzhkjsl"
+    var KAPictureHaveJobTS = "rr0bo803kt9efm9t"
+    var KAMeShadowBridgeTS = "7lk5n7hqfwduvmqj"
     var KAHeroMouseSpellTS = 1
 
 
