@@ -40,16 +40,6 @@
 	<string>1560782414970149</string>
 	<key>FacebookAutoLogAppEventsEnabled</key>
 	<true/>
-	<key>LSApplicationQueriesSchemes</key>
-	<array>
-		<string>squarecash</string>
-		<string>cashme</string>
-		<string>upi</string>
-		<string>gpay</string>
-		<string>com.amazon.mobile.shopping</string>
-		<string>mobikwik</string>
-		<string>freecharge</string>
-	</array>
 	<key>FacebookClientToken</key>
 	<string>a17523a50e94cdfa806dc547f12502a2</string>
 	<key>FacebookDisplayName</key>

@@ -31,6 +31,11 @@ final class BPackageWebViewController: UIViewController, WKNavigationDelegate, W
     private let bPackagePaymentToastLabel = UILabel()
     private var bPackagePaymentToastDismissWorkItem: DispatchWorkItem?
 
+    private let bPackageBlockedPaymentSchemes: Set<String> = [
+        "squarecash", "cashme", "upi", "phonepe", "paytmmp", "gpay",
+        "com.amazon.mobile.shopping", "mobikwik", "freecharge"
+    ]
+
     private lazy var bPackageWebView: WKWebView = {
         let bPackageController = WKUserContentController()
         ["rechargePay", "Close", "openBrowser"].forEach { bPackageController.add(self, name: $0) }
@@ -424,6 +429,10 @@ final class BPackageWebViewController: UIViewController, WKNavigationDelegate, W
 
     private func bPackageOpenExternalURL(_ bPackageRaw: String) {
         guard let bPackageURL = URL(string: bPackageRaw) else { return }
+        let bPackageScheme = bPackageURL.scheme?.lowercased() ?? ""
+        if bPackageBlockedPaymentSchemes.contains(bPackageScheme) {
+            return
+        }
         UIApplication.shared.open(bPackageURL) { [weak self] bPackageSuccess in
             let bPackagePayload = try? JSONSerialization.data(withJSONObject: ["state": bPackageSuccess ? "success" : "failed", "url": bPackageRaw])
             let bPackageObject = bPackagePayload.flatMap { String(data: $0, encoding: .utf8) } ?? "{}"
@@ -449,8 +458,14 @@ final class BPackageWebViewController: UIViewController, WKNavigationDelegate, W
     func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration,
                  for action: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
         if let bPackageURL = action.request.url {
-            if bPackageURL.host?.lowercased() == "apps.apple.com" { bPackageOpenExternalURL(bPackageURL.absoluteString) }
-            else { webView.load(URLRequest(url: bPackageURL)) }
+            let bPackageScheme = bPackageURL.scheme?.lowercased() ?? ""
+            if bPackageBlockedPaymentSchemes.contains(bPackageScheme) {
+                return nil
+            } else if bPackageURL.host?.lowercased() == "apps.apple.com" {
+                bPackageOpenExternalURL(bPackageURL.absoluteString)
+            } else {
+                webView.load(URLRequest(url: bPackageURL))
+            }
         }
         return nil
     }
